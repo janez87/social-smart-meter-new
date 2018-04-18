@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="Imports Wizard Entry" name="http://xmlns.com/foaf/0.1/" uri="foaf.rdf"/>
+    <uri id="Imports Wizard Entry" name="http://rdfs.org/sioc/ns#" uri="sioc.rdf"/>
+    <uri id="Imports Wizard Entry" name="http://xmlns.com/foaf/0.1/" uri="file:/Users/roosdekok/Projects/Thesis/Report/Ch3_Characteristics/Ontologies/Existing%20ones/Energy%20Consumption%20Behavior/BBC%20Food%20Ontology/food_subselection.owl"/>
+    <uri id="User Entered Import Resolution" name="http://www.co-ode.org/ontologies/roberts/upper.owl" uri="file:/Users/roosdekok/Projects/Thesis/Report/Ch3_Characteristics/Ontologies/Existing%20ones/Energy%20Consumption%20Behavior/Travel/upper.owl"/>
+    <uri id="User Entered Import Resolution" name="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SUMO/HEAD/SUMO-HEAD.owl" uri="file:/Users/roosdekok/Projects/Thesis/Report/Ch3_Characteristics/Ontologies/Existing%20ones/Energy%20Consumption%20Behavior/SUMO/SUMO.owl"/>
+    <uri id="Imports Wizard Entry" name="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/HEAD/SEMANCO-HEAD.owl" uri="file:/Users/roosdekok/Projects/Thesis/Report/Ch3_Characteristics/Ontologies/Existing%20ones/Energy%20Consumption%20Behavior/Semanco/semanco-1.owl"/>
+    <uri id="Imports Wizard Entry" name="http://socsem.open.ac.uk/ontologies/eu#" uri="file:/Users/roosdekok/Projects/Thesis/Report/Ch3_Characteristics/Ontologies/Existing%20ones/Energy%20Consumption%20Behavior/EnergyUse/eu.owl"/>
+    <uri id="Imports Wizard Entry" name="http://www.owl-ontologies.com/travel.owl" uri="file:/Users/roosdekok/Projects/Thesis/Report/Ch3_Characteristics/Ontologies/Existing%20ones/Energy%20Consumption%20Behavior/Travel/travel.owl"/>
+    <uri id="User Entered Import Resolution" name="http://www.co-ode.org/roberts/upper.owl" uri="file:/Users/roosdekok/Projects/Thesis/Report/Ch3_Characteristics/Ontologies/Existing%20ones/Energy%20Consumption%20Behavior/Travel/upper.owl"/>
+    <uri id="Imports Wizard Entry" name="http://www.co-ode.org/roberts/travel.owl" uri="file:/Users/roosdekok/Projects/Thesis/Report/Ch3_Characteristics/Ontologies/Existing%20ones/Energy%20Consumption%20Behavior/Travel/c23.owl"/>
+    <uri id="Imports Wizard Entry" name="file:/Users/roosdekok/Projects/Thesis/Report/Ch3_Characteristics/Ontologies/Existing%20ones/Energy%20Consumption%20Behavior/SUMO/SUMO" uri="file:/Users/roosdekok/Projects/Thesis/Report/Ch3_Characteristics/Ontologies/Existing%20ones/Energy%20Consumption%20Behavior/SUMO/SUMO.owl"/>
+    <uri id="Imports Wizard Entry" name="http://xmlns.com/foaf/0.1/" uri="file:/Users/roosdekok/Projects/Thesis/Report/Ch3_Characteristics/Ontologies/Existing%20ones/FOAF/foaf.rdf"/>
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+        <uri id="Automatically generated entry, Timestamp=1523633525076" name="http://elite.polito.it/ontologies/dogont.owl" uri="dogont.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1523633525076" name="http://elite.polito.it/ontologies/muo-vocab.owl" uri="muo-vocab.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1523633525076" name="http://elite.polito.it/ontologies/poweront.owl" uri="poweront.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1523633525076" name="http://elite.polito.it/ontologies/ucum-instances.owl" uri="ucum-instances.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1523633525076" name="duplicate:http://rdfs.org/sioc/ns" uri="sioc.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1523633525076" name="duplicate:http://rdfs.org/sioc/ns" uri="ns.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1523633525076" name="duplicate:http://www.semanticweb.org/roosdekok/ontologies/2018/1/EnergyConsumptionBehavior" uri="EnergyConsumptionBehavior_v2.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1523633525076" name="duplicate:http://www.semanticweb.org/roosdekok/ontologies/2018/1/EnergyConsumptionBehavior" uri="EnergyConsumptionBehavior_v1.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1523633525076" name="http://xmlns.com/foaf/0.1/" uri="foaf.rdf"/>
+    </group>
+</catalog>

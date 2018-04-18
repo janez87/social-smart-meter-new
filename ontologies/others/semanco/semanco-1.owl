@@ -1,0 +1,1136 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#"
+     xml:base="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl"
+     xmlns:qudt="http://qudt.org/schema/qudt#"
+     xmlns:SUMO="http://www.ontologyportal.org/SUMO.owl#"
+     xmlns:quantity="http://qudt.org/vocab/quantity#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:semanco="http://www.semanco-project.eu/2012/5/SEMANCO.owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl">
+        <owl:versionIRI rdf:resource="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/HEAD/SEMANCO-HEAD.owl"/>
+        <owl:imports rdf:resource="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SUMO/HEAD/SUMO-HEAD.owl"/>
+        <rdfs:comment xml:lang="en">This ontology is released under the Apache License Version 2.0 (www.apache.org/licenses/).</rdfs:comment>
+        <rdfs:comment xml:lang="en">Produced on date: ~build.date~</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#abstractClass -->
+
+    <owl:AnnotationProperty rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#abstractClass"/>
+    
+
+
+    <!-- http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#author -->
+
+    <owl:AnnotationProperty rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#author"/>
+    
+
+
+    <!-- http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#reference -->
+
+    <owl:AnnotationProperty rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#reference"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#hasAddress -->
+
+    <owl:ObjectProperty rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#hasAddress"/>
+    
+
+
+    <!-- http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#hasAge -->
+
+    <owl:ObjectProperty rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#hasAge"/>
+    
+
+
+    <!-- http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#hasDuration -->
+
+    <owl:ObjectProperty rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#hasDuration"/>
+    
+
+
+    <!-- http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#hasElectrical_Appliances_Type -->
+
+    <owl:ObjectProperty rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#hasElectrical_Appliances_Type"/>
+    
+
+
+    <!-- http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#hasEnd_Period -->
+
+    <owl:ObjectProperty rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#hasEnd_Period"/>
+    
+
+
+    <!-- http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#hasEnergy_Carrier -->
+
+    <owl:ObjectProperty rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#hasEnergy_Carrier"/>
+    
+
+
+    <!-- http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#hasEnergy_Consumption_And_Energy_Saving_Related_To_Building_Services -->
+
+    <owl:ObjectProperty rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#hasEnergy_Consumption_And_Energy_Saving_Related_To_Building_Services"/>
+    
+
+
+    <!-- http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#hasEnergy_Quantity_And_Emission -->
+
+    <owl:ObjectProperty rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#hasEnergy_Quantity_And_Emission"/>
+    
+
+
+    <!-- http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#hasEnergy_Service -->
+
+    <owl:ObjectProperty rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#hasEnergy_Service"/>
+    
+
+
+    <!-- http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#hasEnergy_Source -->
+
+    <owl:ObjectProperty rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#hasEnergy_Source"/>
+    
+
+
+    <!-- http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#hasLatitude -->
+
+    <owl:ObjectProperty rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#hasLatitude"/>
+    
+
+
+    <!-- http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#hasLocal_Climate -->
+
+    <owl:ObjectProperty rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#hasLocal_Climate"/>
+    
+
+
+    <!-- http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#hasLongitude -->
+
+    <owl:ObjectProperty rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#hasLongitude"/>
+    
+
+
+    <!-- http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#hasOrientation -->
+
+    <owl:ObjectProperty rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#hasOrientation"/>
+    
+
+
+    <!-- http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#hasUnit -->
+
+    <owl:ObjectProperty rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#hasUnit"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#addressValue -->
+
+    <owl:DatatypeProperty rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#addressValue">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#cookingValue -->
+
+    <owl:DatatypeProperty rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#cookingValue">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.ontologyportal.org/SUMO.owl#Cooking"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#countryValue -->
+
+    <owl:DatatypeProperty rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#countryValue">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#dataValue -->
+
+    <owl:DatatypeProperty rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#dataValue">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#delivered_EnergyValue -->
+
+    <owl:DatatypeProperty rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#delivered_EnergyValue">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#door_U-valueValue -->
+
+    <owl:DatatypeProperty rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#door_U-valueValue">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#durationValue -->
+
+    <owl:DatatypeProperty rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#durationValue">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#electrical_AppliancesValue -->
+
+    <owl:DatatypeProperty rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#electrical_AppliancesValue">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#electrical_Appliances_Power_InstalledValue -->
+
+    <owl:DatatypeProperty rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#electrical_Appliances_Power_InstalledValue">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#electrical_Appliances_TypeValue -->
+
+    <owl:DatatypeProperty rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#electrical_Appliances_TypeValue">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#energy_CarrierValue -->
+
+    <owl:DatatypeProperty rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#energy_CarrierValue">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#energy_Distribution_EfficiencyValue -->
+
+    <owl:DatatypeProperty rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#energy_Distribution_EfficiencyValue">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#energy_GeneratorValue -->
+
+    <owl:DatatypeProperty rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#energy_GeneratorValue">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#energy_Generator_EfficiencyValue -->
+
+    <owl:DatatypeProperty rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#energy_Generator_EfficiencyValue">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#energy_Generator_PowerValue -->
+
+    <owl:DatatypeProperty rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#energy_Generator_PowerValue">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#energy_Generator_ScaleValue -->
+
+    <owl:DatatypeProperty rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#energy_Generator_ScaleValue">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#energy_IndicatorValue -->
+
+    <owl:DatatypeProperty rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#energy_IndicatorValue">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#energy_NeedValue -->
+
+    <owl:DatatypeProperty rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#energy_NeedValue">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#energy_Performance_IndicatorValue -->
+
+    <owl:DatatypeProperty rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#energy_Performance_IndicatorValue">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#energy_ServicesValue -->
+
+    <owl:DatatypeProperty rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#energy_ServicesValue">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#energy_SourceValue -->
+
+    <owl:DatatypeProperty rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#energy_SourceValue">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#genderValue -->
+
+    <owl:DatatypeProperty rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#genderValue">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#land_QualityValue -->
+
+    <owl:DatatypeProperty rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#land_QualityValue">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#land_Use_By_ActivityValue -->
+
+    <owl:DatatypeProperty rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#land_Use_By_ActivityValue">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#latitudeValue -->
+
+    <owl:DatatypeProperty rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#latitudeValue">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#longitudeValue -->
+
+    <owl:DatatypeProperty rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#longitudeValue">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Energy_Consumption -->
+
+    <owl:Class rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Energy_Consumption">
+        <rdfs:subClassOf rdf:resource="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Energy_Consumption_And_Energy_Saving_Related_To_Building_Services"/>
+        <author>Alvaro Sicilia</author>
+        <reference>ISO/IEC CD 13273-1</reference>
+        <rdfs:comment>quantity of energy applied</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Energy_Consumption_And_Energy_Saving_Related_To_Building_Services -->
+
+    <owl:Class rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Energy_Consumption_And_Energy_Saving_Related_To_Building_Services">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/EnergyConsumptionBehavior#Energy"/>
+        <author>Alvaro Sicilia</author>
+        <rdfs:comment>energy referred to building services</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Energy_Demand -->
+
+    <owl:Class rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Energy_Demand">
+        <rdfs:subClassOf rdf:resource="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Energy_Consumption_And_Energy_Saving_Related_To_Building_Services"/>
+        <author>Alvaro Sicilia</author>
+        <rdfs:comment>requirement for a quantity of energy by an energy using system at a given instant or averaged over any designated interval of time</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Energy_Quantity_And_Emission -->
+
+    <owl:Class rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Energy_Quantity_And_Emission">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/EnergyConsumptionBehavior#Energy"/>
+        <author>Alvaro Sicilia</author>
+    </owl:Class>
+    
+
+
+    <!-- http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Energy_Saving -->
+
+    <owl:Class rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Energy_Saving">
+        <rdfs:subClassOf rdf:resource="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Energy_Consumption_And_Energy_Saving_Related_To_Building_Services"/>
+        <author>Alvaro Sicilia</author>
+        <reference>ISO/IEC CD 13273-1</reference>
+        <rdfs:comment>reduction of energy consumption following implementation of an end-use action intented to improve energy performance</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Household_Member -->
+
+    <owl:Class rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Household_Member">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Human"/>
+        <author>Alvaro Sicilia</author>
+    </owl:Class>
+    
+
+
+    <!-- http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Standard_Unit -->
+
+    <owl:Class rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Standard_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#UnitOfMeasure"/>
+        <author>Andy Nolle</author>
+        <rdfs:comment>represents the standard unit of a unit of measure, only one individual per unit of measure</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Unit_Of_Air_Exchanage -->
+
+    <owl:Class rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Unit_Of_Air_Exchanage">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#CompositeUnitOfMeasure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Unit_Of_Air_Exchange_Rate -->
+
+    <owl:Class rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Unit_Of_Air_Exchange_Rate">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#CompositeUnitOfMeasure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Unit_Of_Areal_Heat_Capacity -->
+
+    <owl:Class rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Unit_Of_Areal_Heat_Capacity">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#CompositeUnitOfMeasure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Unit_Of_Compactness -->
+
+    <owl:Class rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Unit_Of_Compactness">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#CompositeUnitOfMeasure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Unit_Of_Crowding -->
+
+    <owl:Class rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Unit_Of_Crowding">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#CompositeUnitOfMeasure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Unit_Of_Emission -->
+
+    <owl:Class rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Unit_Of_Emission">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#CompositeUnitOfMeasure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Unit_Of_Energy -->
+
+    <owl:Class rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Unit_Of_Energy">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#CompositeUnitOfMeasure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Unit_Of_Energy_Capacity -->
+
+    <owl:Class rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Unit_Of_Energy_Capacity">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#CompositeUnitOfMeasure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Unit_Of_Energy_Performance -->
+
+    <owl:Class rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Unit_Of_Energy_Performance">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#CompositeUnitOfMeasure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Unit_Of_Irradiance -->
+
+    <owl:Class rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Unit_Of_Irradiance">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#CompositeUnitOfMeasure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Unit_Of_Irradiation -->
+
+    <owl:Class rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Unit_Of_Irradiation">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#CompositeUnitOfMeasure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Unit_Of_Mass_Airflow -->
+
+    <owl:Class rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Unit_Of_Mass_Airflow">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#CompositeUnitOfMeasure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Unit_Of_Mass_Airflow_Rate -->
+
+    <owl:Class rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Unit_Of_Mass_Airflow_Rate">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#CompositeUnitOfMeasure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Unit_Of_Mixing_Ratio -->
+
+    <owl:Class rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Unit_Of_Mixing_Ratio">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#CompositeUnitOfMeasure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Unit_Of_Normalised_Energy -->
+
+    <owl:Class rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Unit_Of_Normalised_Energy">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#CompositeUnitOfMeasure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Unit_Of_Power -->
+
+    <owl:Class rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Unit_Of_Power">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#CompositeUnitOfMeasure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Unit_Of_Pressure -->
+
+    <owl:Class rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Unit_Of_Pressure">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#CompositeUnitOfMeasure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Unit_Of_Speed -->
+
+    <owl:Class rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Unit_Of_Speed">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#CompositeUnitOfMeasure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Unit_Of_U_Value -->
+
+    <owl:Class rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Unit_Of_U_Value">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#CompositeUnitOfMeasure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Unit_Of_Volumetric_Airflow -->
+
+    <owl:Class rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Unit_Of_Volumetric_Airflow">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#CompositeUnitOfMeasure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Unit_Of_Volumetric_Airflow_Rate -->
+
+    <owl:Class rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Unit_Of_Volumetric_Airflow_Rate">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#CompositeUnitOfMeasure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#CompositeUnitOfMeasure -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#CompositeUnitOfMeasure"/>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#Cooking -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#Cooking">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/EnergyConsumptionBehavior#DwellingActivity"/>
+        <author>Alvaro Sicilia</author>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#Human -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#Human"/>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#UnitOfMeasure -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#UnitOfMeasure"/>
+    
+
+
+    <!-- http://www.semanticweb.org/roosdekok/ontologies/2018/1/EnergyConsumptionBehavior#DwellingActivity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/1/EnergyConsumptionBehavior#DwellingActivity"/>
+    
+
+
+    <!-- http://www.semanticweb.org/roosdekok/ontologies/2018/1/EnergyConsumptionBehavior#Energy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/1/EnergyConsumptionBehavior#Energy"/>
+    
+
+
+    <!-- http://www.semanticweb.org/roosdekok/ontologies/2018/1/EnergyConsumptionBehavior#Individual -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/1/EnergyConsumptionBehavior#Individual"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#CubicMeter -->
+
+    <owl:NamedIndividual rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#CubicMeter">
+        <author>Andy Nolle</author>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#CubicMeterPerSecond -->
+
+    <owl:NamedIndividual rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#CubicMeterPerSecond">
+        <rdf:type rdf:resource="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Unit_Of_Volumetric_Airflow"/>
+        <author>Andy Nolle</author>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#GramPerKilogram -->
+
+    <owl:NamedIndividual rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#GramPerKilogram">
+        <rdf:type rdf:resource="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Unit_Of_Mixing_Ratio"/>
+        <author>Andy Nolle</author>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#GramPerKilowattHour -->
+
+    <owl:NamedIndividual rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#GramPerKilowattHour">
+        <rdf:type rdf:resource="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Unit_Of_Emission"/>
+        <author>Andy Nolle</author>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#HectoPascal -->
+
+    <owl:NamedIndividual rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#HectoPascal">
+        <rdf:type rdf:resource="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Unit_Of_Pressure"/>
+        <author>Andy Nolle</author>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#JoulePerSecond -->
+
+    <owl:NamedIndividual rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#JoulePerSecond">
+        <rdf:type rdf:resource="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Unit_Of_Power"/>
+        <author>Andy Nolle</author>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#JoulePerSquareMeterKelvin -->
+
+    <owl:NamedIndividual rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#JoulePerSquareMeterKelvin">
+        <rdf:type rdf:resource="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Unit_Of_Energy_Capacity"/>
+        <author>Andy Nolle</author>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#KiloWattHourPerSquerMeter -->
+
+    <owl:NamedIndividual rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#KiloWattHourPerSquerMeter">
+        <rdf:type rdf:resource="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Unit_Of_Energy_Performance"/>
+        <author>Andy Nolle</author>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#KilogramPerSecond -->
+
+    <owl:NamedIndividual rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#KilogramPerSecond">
+        <rdf:type rdf:resource="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Unit_Of_Mass_Airflow"/>
+        <author>Andy Nolle</author>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#KilogrammThroughSecond -->
+
+    <owl:NamedIndividual rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#KilogrammThroughSecond">
+        <rdf:type rdf:resource="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Unit_Of_Mass_Airflow_Rate"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#MegaJoulePerSquareMeter -->
+
+    <owl:NamedIndividual rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#MegaJoulePerSquareMeter">
+        <rdf:type rdf:resource="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Unit_Of_Irradiation"/>
+        <author>Andy Nolle</author>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#MeterEx3ThroughHourButMetetrEx3 -->
+
+    <owl:NamedIndividual rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#MeterEx3ThroughHourButMetetrEx3">
+        <rdf:type rdf:resource="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Unit_Of_Air_Exchange_Rate"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#MeterEx3ThroughSecond -->
+
+    <owl:NamedIndividual rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#MeterEx3ThroughSecond">
+        <rdf:type rdf:resource="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Unit_Of_Volumetric_Airflow_Rate"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#MeterPerSecond -->
+
+    <owl:NamedIndividual rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#MeterPerSecond">
+        <rdf:type rdf:resource="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Unit_Of_Speed"/>
+        <author>Andy Nolle</author>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#PerMeter -->
+
+    <owl:NamedIndividual rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#PerMeter">
+        <rdf:type rdf:resource="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Unit_Of_Compactness"/>
+        <author>Andy Nolle</author>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Percent -->
+
+    <owl:NamedIndividual rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Percent">
+        <author>Andy Nolle</author>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#SquareCentimeter -->
+
+    <owl:NamedIndividual rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#SquareCentimeter">
+        <author>Andy Nolle</author>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#SquareFoot -->
+
+    <owl:NamedIndividual rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#SquareFoot">
+        <author>Andy Nolle</author>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#SquareInch -->
+
+    <owl:NamedIndividual rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#SquareInch">
+        <author>Andy Nolle</author>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#WattHour -->
+
+    <owl:NamedIndividual rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#WattHour">
+        <rdf:type rdf:resource="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Unit_Of_Energy"/>
+        <author>Andy Nolle</author>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#WattPerSquareMeter -->
+
+    <owl:NamedIndividual rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#WattPerSquareMeter">
+        <rdf:type rdf:resource="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Unit_Of_Irradiance"/>
+        <author>Andy Nolle</author>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#Acre -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologyportal.org/SUMO.owl#Acre">
+        <author>Andy Nolle</author>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#AngularDegree -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologyportal.org/SUMO.owl#AngularDegree">
+        <author>Andy Nolle</author>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#CelsiusDegree -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologyportal.org/SUMO.owl#CelsiusDegree">
+        <author>Andy Nolle</author>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#Centimeter -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologyportal.org/SUMO.owl#Centimeter">
+        <author>Andy Nolle</author>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#FahrenheitDegree -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologyportal.org/SUMO.owl#FahrenheitDegree">
+        <author>Andy Nolle</author>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#Gram -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologyportal.org/SUMO.owl#Gram">
+        <author>Andy Nolle</author>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#HourDuration -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologyportal.org/SUMO.owl#HourDuration">
+        <author>Andy Nolle</author>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#Joule -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologyportal.org/SUMO.owl#Joule">
+        <rdf:type rdf:resource="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Standard_Unit"/>
+        <rdf:type rdf:resource="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Unit_Of_Energy"/>
+        <author>Andy Nolle</author>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#KelvinDegree -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologyportal.org/SUMO.owl#KelvinDegree">
+        <rdf:type rdf:resource="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Standard_Unit"/>
+        <author>Andy Nolle</author>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#Kilogram -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologyportal.org/SUMO.owl#Kilogram">
+        <rdf:type rdf:resource="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Standard_Unit"/>
+        <author>Andy Nolle</author>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#Kilometer -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologyportal.org/SUMO.owl#Kilometer">
+        <author>Andy Nolle</author>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#KilowattHour -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologyportal.org/SUMO.owl#KilowattHour">
+        <rdf:type rdf:resource="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Unit_Of_Energy"/>
+        <author>Andy Nolle</author>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#Meter -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologyportal.org/SUMO.owl#Meter">
+        <rdf:type rdf:resource="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Standard_Unit"/>
+        <author>Andy Nolle</author>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#Millimeter -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologyportal.org/SUMO.owl#Millimeter">
+        <author>Andy Nolle</author>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#Pascal -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologyportal.org/SUMO.owl#Pascal">
+        <rdf:type rdf:resource="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Standard_Unit"/>
+        <rdf:type rdf:resource="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Unit_Of_Pressure"/>
+        <author>Andy Nolle</author>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#Radian -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologyportal.org/SUMO.owl#Radian">
+        <rdf:type rdf:resource="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Standard_Unit"/>
+        <author>Andy Nolle</author>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#RankineDegree -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologyportal.org/SUMO.owl#RankineDegree">
+        <author>Andy Nolle</author>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#SecondDuration -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologyportal.org/SUMO.owl#SecondDuration">
+        <rdf:type rdf:resource="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Standard_Unit"/>
+        <author>Andy Nolle</author>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#SquareKilometer -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologyportal.org/SUMO.owl#SquareKilometer">
+        <author>Andy Nolle</author>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#SquareMeter -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologyportal.org/SUMO.owl#SquareMeter">
+        <rdf:type rdf:resource="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Standard_Unit"/>
+        <author>Andy Nolle</author>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#SquareMile -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologyportal.org/SUMO.owl#SquareMile">
+        <author>Andy Nolle</author>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#SquareYard -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologyportal.org/SUMO.owl#SquareYard">
+        <author>Andy Nolle</author>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#Watt -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologyportal.org/SUMO.owl#Watt">
+        <rdf:type rdf:resource="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Standard_Unit"/>
+        <rdf:type rdf:resource="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Unit_Of_Power"/>
+        <author>Andy Nolle</author>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#hasDuration"/>
+        <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:subClassOf rdf:resource="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Energy_Quantity_And_Emission"/>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#hasEnergy_Carrier"/>
+        <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:subClassOf rdf:resource="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Energy_Quantity_And_Emission"/>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#hasEnergy_Quantity_And_Emission"/>
+        <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:subClassOf rdf:resource="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Energy_Consumption_And_Energy_Saving_Related_To_Building_Services"/>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#hasEnergy_Service"/>
+        <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:subClassOf rdf:resource="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Energy_Quantity_And_Emission"/>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#hasEnergy_Source"/>
+        <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:subClassOf rdf:resource="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Energy_Quantity_And_Emission"/>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#hasEnergy_Consumption_And_Energy_Saving_Related_To_Building_Services"/>
+            </rdf:Description>
+        </owl:onProperty>
+        <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:subClassOf rdf:resource="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Energy_Consumption_And_Energy_Saving_Related_To_Building_Services"/>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#hasEnergy_Quantity_And_Emission"/>
+            </rdf:Description>
+        </owl:onProperty>
+        <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:subClassOf rdf:resource="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Energy_Quantity_And_Emission"/>
+    </owl:Restriction>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

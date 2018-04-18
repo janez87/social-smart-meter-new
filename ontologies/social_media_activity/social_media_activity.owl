@@ -1,0 +1,296 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/roosdekok/ontologies/2018/3/untitled-ontology-66#"
+     xml:base="http://www.semanticweb.org/roosdekok/ontologies/2018/3/untitled-ontology-66"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:ns="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:wot="http://xmlns.com/wot/0.1/"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/3/untitled-ontology-66">
+        <owl:imports rdf:resource="http://rdfs.org/sioc/ns#"/>
+        <owl:imports rdf:resource="http://xmlns.com/foaf/0.1/"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/roosdekok/ontologies/2018/3/untitled-ontology-66#attends -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/3/untitled-ontology-66#attends">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/3/untitled-ontology-66#isAttendedBy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/roosdekok/ontologies/2018/3/untitled-ontology-66#belongsTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/3/untitled-ontology-66#belongsTo">
+        <owl:equivalentProperty rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/3/untitled-ontology-66#hasA"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/roosdekok/ontologies/2018/3/untitled-ontology-66#creates -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/3/untitled-ontology-66#creates">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/3/untitled-ontology-66#isCreatedBy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/roosdekok/ontologies/2018/3/untitled-ontology-66#follows -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/3/untitled-ontology-66#follows">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/3/untitled-ontology-66#isFollowedBy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/roosdekok/ontologies/2018/3/untitled-ontology-66#hasA -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/3/untitled-ontology-66#hasA"/>
+    
+
+
+    <!-- http://www.semanticweb.org/roosdekok/ontologies/2018/3/untitled-ontology-66#isAt -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/3/untitled-ontology-66#isAt">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/3/untitled-ontology-66#isVisitedBy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/roosdekok/ontologies/2018/3/untitled-ontology-66#isAttendedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/3/untitled-ontology-66#isAttendedBy"/>
+    
+
+
+    <!-- http://www.semanticweb.org/roosdekok/ontologies/2018/3/untitled-ontology-66#isComposedOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/3/untitled-ontology-66#isComposedOf">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/3/untitled-ontology-66#isPartOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/roosdekok/ontologies/2018/3/untitled-ontology-66#isCreatedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/3/untitled-ontology-66#isCreatedBy"/>
+    
+
+
+    <!-- http://www.semanticweb.org/roosdekok/ontologies/2018/3/untitled-ontology-66#isFollowedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/3/untitled-ontology-66#isFollowedBy"/>
+    
+
+
+    <!-- http://www.semanticweb.org/roosdekok/ontologies/2018/3/untitled-ontology-66#isLikedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/3/untitled-ontology-66#isLikedBy">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/3/untitled-ontology-66#likes"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/roosdekok/ontologies/2018/3/untitled-ontology-66#isMentionedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/3/untitled-ontology-66#isMentionedBy">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/3/untitled-ontology-66#mentions"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/roosdekok/ontologies/2018/3/untitled-ontology-66#isPartOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/3/untitled-ontology-66#isPartOf"/>
+    
+
+
+    <!-- http://www.semanticweb.org/roosdekok/ontologies/2018/3/untitled-ontology-66#isViewedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/3/untitled-ontology-66#isViewedBy">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/3/untitled-ontology-66#views"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/roosdekok/ontologies/2018/3/untitled-ontology-66#isVisitedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/3/untitled-ontology-66#isVisitedBy"/>
+    
+
+
+    <!-- http://www.semanticweb.org/roosdekok/ontologies/2018/3/untitled-ontology-66#isWrittenBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/3/untitled-ontology-66#isWrittenBy">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/3/untitled-ontology-66#writes"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/roosdekok/ontologies/2018/3/untitled-ontology-66#likes -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/3/untitled-ontology-66#likes"/>
+    
+
+
+    <!-- http://www.semanticweb.org/roosdekok/ontologies/2018/3/untitled-ontology-66#mentions -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/3/untitled-ontology-66#mentions"/>
+    
+
+
+    <!-- http://www.semanticweb.org/roosdekok/ontologies/2018/3/untitled-ontology-66#views -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/3/untitled-ontology-66#views"/>
+    
+
+
+    <!-- http://www.semanticweb.org/roosdekok/ontologies/2018/3/untitled-ontology-66#writes -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/3/untitled-ontology-66#writes"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://rdfs.org/sioc/ns#Forum -->
+
+    <rdf:Description rdf:about="http://rdfs.org/sioc/ns#Forum">
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/3/untitled-ontology-66#Timeline"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://schema.org/ImageObject -->
+
+    <rdf:Description rdf:about="http://schema.org/ImageObject">
+        <rdfs:subClassOf rdf:resource="http://rdfs.org/sioc/ns#Item"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/roosdekok/ontologies/2018/3/untitled-ontology-66#Calendar -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/3/untitled-ontology-66#Calendar"/>
+    
+
+
+    <!-- http://www.semanticweb.org/roosdekok/ontologies/2018/3/untitled-ontology-66#Event -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/3/untitled-ontology-66#Event"/>
+    
+
+
+    <!-- http://www.semanticweb.org/roosdekok/ontologies/2018/3/untitled-ontology-66#Link -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/3/untitled-ontology-66#Link">
+        <rdfs:subClassOf rdf:resource="http://rdfs.org/sioc/ns#Item"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/roosdekok/ontologies/2018/3/untitled-ontology-66#Location -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/3/untitled-ontology-66#Location">
+        <owl:equivalentClass rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/roosdekok/ontologies/2018/3/untitled-ontology-66#Mention -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/3/untitled-ontology-66#Mention"/>
+    
+
+
+    <!-- http://www.semanticweb.org/roosdekok/ontologies/2018/3/untitled-ontology-66#PointOfInterest -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/3/untitled-ontology-66#PointOfInterest">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/3/untitled-ontology-66#Location"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/roosdekok/ontologies/2018/3/untitled-ontology-66#Tag -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/3/untitled-ontology-66#Tag">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/3/untitled-ontology-66#Mention"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/roosdekok/ontologies/2018/3/untitled-ontology-66#Timeline -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/3/untitled-ontology-66#Timeline">
+        <rdfs:subClassOf rdf:resource="http://rdfs.org/sioc/ns#Container"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/roosdekok/ontologies/2018/3/untitled-ontology-66#UserMention -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/3/untitled-ontology-66#UserMention">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/3/untitled-ontology-66#Mention"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/roosdekok/ontologies/2018/3/untitled-ontology-66#UserProfile -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/3/untitled-ontology-66#UserProfile">
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/OnlineAccount"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/roosdekok/ontologies/2018/3/untitled-ontology-66#Video -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/3/untitled-ontology-66#Video">
+        <rdfs:subClassOf rdf:resource="http://rdfs.org/sioc/ns#Item"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Image -->
+
+    <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/Image">
+        <rdfs:subClassOf rdf:resource="http://rdfs.org/sioc/ns#Item"/>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

@@ -1,0 +1,668 @@
+@prefix : <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix v: <http://rdf.data-vocabulary.org/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix fo: <http://purl.org/ontology/fo/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcmit: <http://purl.org/dc/dcmitype/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctypes: <http://purl.org/dc/dcmitype/> .
+@prefix provenance: <http://www.bbc.co.uk/ontologies/provenance/> .
+@base <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+
+<http://www.w3.org/2003/06/sw-vocab-status/ns#> rdf:type owl:Ontology ;
+                                                 owl:versionIRI fo: ;
+                                                 owl:imports <http://www.w3.org/2003/06/sw-vocab-status/ns#> ,
+                                                             provenance: ,
+                                                             foaf: ;
+                                                 provenance:public "true"^^xsd:boolean ;
+                                                 provenance:canonicalLocation "https://repo.dev.bbc.co.uk/services/linked-data/ontologies/domain/kl/food/food-ontology-1-1.ttl"^^xsd:string ;
+                                                 provenance:changeReason "Fix a typo of occassion"^^xsd:string ;
+                                                 provenance:version "1.1"^^xsd:double ;
+                                                 owl:versionInfo "1.1"^^xsd:string ;
+                                                 dcterms:created "2011-07-08"^^xsd:date ;
+                                                 dcterms:title "Food Ontology"@en-gb ;
+                                                 provenance:slug "fo"^^xsd:string ;
+                                                 rdfs:comment "A simple vocabulary for describing recipes, ingredients, menus and diets."@en-gb ;
+                                                 rdfs:label "Food Ontology"^^xsd:string ;
+                                                 dc:date "Date: 2014/03/18 16:30:00 " .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/contributor
+dc:contributor rdf:type owl:AnnotationProperty ;
+               dcterms:description "Examples of a Contributor include a person, an organization, or a service. Typically, the name of a Contributor should be used to indicate the entity."@en ;
+               dcterms:hasVersion <http://dublincore.org/usage/terms/history/#contributor-006> ;
+               dcterms:issued "1999-07-02"^^xsd:date ;
+               dcterms:modified "2008-01-14"^^xsd:date ;
+               rdfs:comment "An entity responsible for making contributions to the resource."@en ;
+               rdfs:isDefinedBy dc: ;
+               rdfs:label "Contributor"@en ;
+               skos:note "A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document \"DCMI Metadata Terms\" (http://dublincore.org/documents/dcmi-terms/) for an explanation."@en .
+
+
+###  http://purl.org/dc/elements/1.1/coverage
+dc:coverage rdf:type owl:AnnotationProperty ;
+            dcterms:description "Spatial topic and spatial applicability may be a named place or a location specified by its geographic coordinates. Temporal topic may be a named period, date, or date range. A jurisdiction may be a named administrative entity or a geographic place to which the resource applies. Recommended best practice is to use a controlled vocabulary such as the Thesaurus of Geographic Names [TGN]. Where appropriate, named places or time periods can be used in preference to numeric identifiers such as sets of coordinates or date ranges."@en ;
+            dcterms:hasVersion <http://dublincore.org/usage/terms/history/#coverage-006> ;
+            dcterms:issued "1999-07-02"^^xsd:date ;
+            dcterms:modified "2008-01-14"^^xsd:date ;
+            rdfs:comment "The spatial or temporal topic of the resource, the spatial applicability of the resource, or the jurisdiction under which the resource is relevant."@en ;
+            rdfs:isDefinedBy dc: ;
+            rdfs:label "Coverage"@en ;
+            skos:note "A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document \"DCMI Metadata Terms\" (http://dublincore.org/documents/dcmi-terms/) for an explanation."@en .
+
+
+###  http://purl.org/dc/elements/1.1/creator
+dc:creator rdf:type owl:AnnotationProperty ;
+           dcterms:description "Examples of a Creator include a person, an organization, or a service. Typically, the name of a Creator should be used to indicate the entity."@en ;
+           dcterms:hasVersion <http://dublincore.org/usage/terms/history/#creator-006> ;
+           dcterms:issued "1999-07-02"^^xsd:date ;
+           dcterms:modified "2008-01-14"^^xsd:date ;
+           rdfs:comment "An entity primarily responsible for making the resource."@en ;
+           rdfs:isDefinedBy dc: ;
+           rdfs:label "Creator"@en ;
+           skos:note "A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document \"DCMI Metadata Terms\" (http://dublincore.org/documents/dcmi-terms/) for an explanation."@en .
+
+
+###  http://purl.org/dc/elements/1.1/date
+dc:date rdf:type owl:AnnotationProperty ;
+        dcterms:description "Date may be used to express temporal information at any level of granularity.  Recommended best practice is to use an encoding scheme, such as the W3CDTF profile of ISO 8601 [W3CDTF]."@en ;
+        dcterms:hasVersion <http://dublincore.org/usage/terms/history/#date-006> ;
+        dcterms:issued "1999-07-02"^^xsd:date ;
+        dcterms:modified "2008-01-14"^^xsd:date ;
+        rdfs:comment "A point or period of time associated with an event in the lifecycle of the resource."@en ;
+        rdfs:isDefinedBy dc: ;
+        rdfs:label "Date"@en ;
+        skos:note "A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document \"DCMI Metadata Terms\" (http://dublincore.org/documents/dcmi-terms/) for an explanation."@en .
+
+
+###  http://purl.org/dc/elements/1.1/description
+dc:description rdf:type owl:AnnotationProperty ;
+               dcterms:description "Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource."@en ;
+               dcterms:hasVersion <http://dublincore.org/usage/terms/history/#description-006> ;
+               dcterms:issued "1999-07-02"^^xsd:date ;
+               dcterms:modified "2008-01-14"^^xsd:date ;
+               rdfs:comment "An account of the resource."@en ;
+               rdfs:isDefinedBy dc: ;
+               rdfs:label "Description"@en ;
+               skos:note "A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document \"DCMI Metadata Terms\" (http://dublincore.org/documents/dcmi-terms/) for an explanation."@en .
+
+
+###  http://purl.org/dc/elements/1.1/format
+dc:format rdf:type owl:AnnotationProperty ;
+          dcterms:description "Examples of dimensions include size and duration. Recommended best practice is to use a controlled vocabulary such as the list of Internet Media Types [MIME]."@en ;
+          dcterms:hasVersion <http://dublincore.org/usage/terms/history/#format-007> ;
+          dcterms:issued "1999-07-02"^^xsd:date ;
+          dcterms:modified "2008-01-14"^^xsd:date ;
+          rdfs:comment "The file format, physical medium, or dimensions of the resource."@en ;
+          rdfs:isDefinedBy dc: ;
+          rdfs:label "Format"@en ;
+          skos:note "A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document \"DCMI Metadata Terms\" (http://dublincore.org/documents/dcmi-terms/) for an explanation."@en .
+
+
+###  http://purl.org/dc/elements/1.1/identifier
+dc:identifier rdf:type owl:AnnotationProperty ;
+              dcterms:description "Recommended best practice is to identify the resource by means of a string conforming to a formal identification system. "@en ;
+              dcterms:hasVersion <http://dublincore.org/usage/terms/history/#identifier-006> ;
+              dcterms:issued "1999-07-02"^^xsd:date ;
+              dcterms:modified "2008-01-14"^^xsd:date ;
+              rdfs:comment "An unambiguous reference to the resource within a given context."@en ;
+              rdfs:isDefinedBy dc: ;
+              rdfs:label "Identifier"@en ;
+              skos:note "A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document \"DCMI Metadata Terms\" (http://dublincore.org/documents/dcmi-terms/) for an explanation."@en .
+
+
+###  http://purl.org/dc/elements/1.1/language
+dc:language rdf:type owl:AnnotationProperty ;
+            dcterms:description "Recommended best practice is to use a controlled vocabulary such as RFC 4646 [RFC4646]."@en ;
+            dcterms:hasVersion <http://dublincore.org/usage/terms/history/#language-007> ;
+            dcterms:issued "1999-07-02"^^xsd:date ;
+            dcterms:modified "2008-01-14"^^xsd:date ;
+            rdfs:comment "A language of the resource."@en ;
+            rdfs:isDefinedBy dc: ;
+            rdfs:label "Language"@en ;
+            rdfs:seeAlso <http://www.ietf.org/rfc/rfc4646.txt> ;
+            skos:note "A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document \"DCMI Metadata Terms\" (http://dublincore.org/documents/dcmi-terms/) for an explanation."@en .
+
+
+###  http://purl.org/dc/elements/1.1/publisher
+dc:publisher rdf:type owl:AnnotationProperty ;
+             dcterms:description "Examples of a Publisher include a person, an organization, or a service. Typically, the name of a Publisher should be used to indicate the entity."@en ;
+             dcterms:hasVersion <http://dublincore.org/usage/terms/history/#publisher-006> ;
+             dcterms:issued "1999-07-02"^^xsd:date ;
+             dcterms:modified "2008-01-14"^^xsd:date ;
+             rdfs:comment "An entity responsible for making the resource available."@en ;
+             rdfs:isDefinedBy dc: ;
+             rdfs:label "Publisher"@en ;
+             skos:note "A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document \"DCMI Metadata Terms\" (http://dublincore.org/documents/dcmi-terms/) for an explanation."@en .
+
+
+###  http://purl.org/dc/elements/1.1/relation
+dc:relation rdf:type owl:AnnotationProperty ;
+            dcterms:description "Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system. "@en ;
+            dcterms:hasVersion <http://dublincore.org/usage/terms/history/#relation-006> ;
+            dcterms:issued "1999-07-02"^^xsd:date ;
+            dcterms:modified "2008-01-14"^^xsd:date ;
+            rdfs:comment "A related resource."@en ;
+            rdfs:isDefinedBy dc: ;
+            rdfs:label "Relation"@en ;
+            skos:note "A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document \"DCMI Metadata Terms\" (http://dublincore.org/documents/dcmi-terms/) for an explanation."@en .
+
+
+###  http://purl.org/dc/elements/1.1/rights
+dc:rights rdf:type owl:AnnotationProperty ;
+          dcterms:description "Typically, rights information includes a statement about various property rights associated with the resource, including intellectual property rights."@en ;
+          dcterms:hasVersion <http://dublincore.org/usage/terms/history/#rights-006> ;
+          dcterms:issued "1999-07-02"^^xsd:date ;
+          dcterms:modified "2008-01-14"^^xsd:date ;
+          rdfs:comment "Information about rights held in and over the resource."@en ;
+          rdfs:isDefinedBy dc: ;
+          rdfs:label "Rights"@en ;
+          skos:note "A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document \"DCMI Metadata Terms\" (http://dublincore.org/documents/dcmi-terms/) for an explanation."@en .
+
+
+###  http://purl.org/dc/elements/1.1/source
+dc:source rdf:type owl:AnnotationProperty ;
+          dcterms:description "The described resource may be derived from the related resource in whole or in part. Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system."@en ;
+          dcterms:hasVersion <http://dublincore.org/usage/terms/history/#source-006> ;
+          dcterms:issued "1999-07-02"^^xsd:date ;
+          dcterms:modified "2008-01-14"^^xsd:date ;
+          rdfs:comment "A related resource from which the described resource is derived."@en ;
+          rdfs:isDefinedBy dc: ;
+          rdfs:label "Source"@en ;
+          skos:note "A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document \"DCMI Metadata Terms\" (http://dublincore.org/documents/dcmi-terms/) for an explanation."@en .
+
+
+###  http://purl.org/dc/elements/1.1/subject
+dc:subject rdf:type owl:AnnotationProperty ;
+           dcterms:description "Typically, the subject will be represented using keywords, key phrases, or classification codes. Recommended best practice is to use a controlled vocabulary."@en ;
+           dcterms:hasVersion <http://dublincore.org/usage/terms/history/#subject-007> ;
+           dcterms:issued "1999-07-02"^^xsd:date ;
+           dcterms:modified "2012-06-14"^^xsd:date ;
+           rdfs:comment "The topic of the resource."@en ;
+           rdfs:isDefinedBy dc: ;
+           rdfs:label "Subject"@en ;
+           skos:note "A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document \"DCMI Metadata Terms\" (http://dublincore.org/documents/dcmi-terms/) for an explanation."@en .
+
+
+###  http://purl.org/dc/elements/1.1/title
+dc:title rdf:type owl:AnnotationProperty ;
+         dcterms:hasVersion <http://dublincore.org/usage/terms/history/#title-006> ;
+         dcterms:issued "1999-07-02"^^xsd:date ;
+         dcterms:modified "2008-01-14"^^xsd:date ;
+         rdfs:comment "A name given to the resource."@en ;
+         rdfs:isDefinedBy dc: ;
+         rdfs:label "Title"@en ;
+         skos:note "A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document \"DCMI Metadata Terms\" (http://dublincore.org/documents/dcmi-terms/) for an explanation."@en .
+
+
+###  http://purl.org/dc/elements/1.1/type
+dc:type rdf:type owl:AnnotationProperty ;
+        dcterms:description "Recommended best practice is to use a controlled vocabulary such as the DCMI Type Vocabulary [DCMITYPE]. To describe the file format, physical medium, or dimensions of the resource, use the Format element."@en ;
+        dcterms:hasVersion <http://dublincore.org/usage/terms/history/#type-006> ;
+        dcterms:issued "1999-07-02"^^xsd:date ;
+        dcterms:modified "2008-01-14"^^xsd:date ;
+        rdfs:comment "The nature or genre of the resource."@en ;
+        rdfs:isDefinedBy dc: ;
+        rdfs:label "Type"@en ;
+        skos:note "A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document \"DCMI Metadata Terms\" (http://dublincore.org/documents/dcmi-terms/) for an explanation."@en .
+
+
+###  http://purl.org/dc/terms/abstract
+dcterms:abstract rdf:type owl:AnnotationProperty ;
+                 rdfs:subPropertyOf dc:description ,
+                                    dcterms:description .
+
+
+###  http://purl.org/dc/terms/accessRights
+dcterms:accessRights rdf:type owl:AnnotationProperty ;
+                     rdfs:subPropertyOf dc:rights ,
+                                        dcterms:rights .
+
+
+###  http://purl.org/dc/terms/alternative
+dcterms:alternative rdf:type owl:AnnotationProperty ;
+                    rdfs:subPropertyOf dc:title ;
+                    rdfs:range rdfs:Literal .
+
+
+###  http://purl.org/dc/terms/available
+dcterms:available rdf:type owl:AnnotationProperty ;
+                  rdfs:subPropertyOf dc:date ;
+                  rdfs:range rdfs:Literal .
+
+
+###  http://purl.org/dc/terms/bibliographicCitation
+dcterms:bibliographicCitation rdf:type owl:AnnotationProperty ;
+                              rdfs:subPropertyOf dc:identifier ;
+                              rdfs:range rdfs:Literal .
+
+
+###  http://purl.org/dc/terms/conformsTo
+dcterms:conformsTo rdf:type owl:AnnotationProperty ;
+                   rdfs:subPropertyOf dc:relation ,
+                                      dcterms:relation .
+
+
+###  http://purl.org/dc/terms/contributor
+dcterms:contributor rdf:type owl:AnnotationProperty ;
+                    rdfs:subPropertyOf dc:contributor .
+
+
+###  http://purl.org/dc/terms/coverage
+dcterms:coverage rdf:type owl:AnnotationProperty ;
+                 rdfs:subPropertyOf dc:coverage .
+
+
+###  http://purl.org/dc/terms/created
+dcterms:created rdf:type owl:AnnotationProperty ;
+                rdfs:subPropertyOf dc:date ;
+                rdfs:range rdfs:Literal .
+
+
+###  http://purl.org/dc/terms/creator
+dcterms:creator rdf:type owl:AnnotationProperty ;
+                rdfs:subPropertyOf dc:creator ,
+                                   dcterms:contributor .
+
+
+###  http://purl.org/dc/terms/date
+dcterms:date rdf:type owl:AnnotationProperty ;
+             rdfs:subPropertyOf dc:date ;
+             rdfs:range rdfs:Literal .
+
+
+###  http://purl.org/dc/terms/dateAccepted
+dcterms:dateAccepted rdf:type owl:AnnotationProperty ;
+                     rdfs:subPropertyOf dc:date ;
+                     rdfs:range rdfs:Literal .
+
+
+###  http://purl.org/dc/terms/dateCopyrighted
+dcterms:dateCopyrighted rdf:type owl:AnnotationProperty ;
+                        rdfs:subPropertyOf dc:date ;
+                        rdfs:range rdfs:Literal .
+
+
+###  http://purl.org/dc/terms/dateSubmitted
+dcterms:dateSubmitted rdf:type owl:AnnotationProperty ;
+                      rdfs:subPropertyOf dc:date ;
+                      rdfs:range rdfs:Literal .
+
+
+###  http://purl.org/dc/terms/description
+dcterms:description rdf:type owl:AnnotationProperty ;
+                    rdfs:subPropertyOf dc:description .
+
+
+###  http://purl.org/dc/terms/extent
+dcterms:extent rdf:type owl:AnnotationProperty ;
+               rdfs:subPropertyOf dc:format ,
+                                  dcterms:format .
+
+
+###  http://purl.org/dc/terms/format
+dcterms:format rdf:type owl:AnnotationProperty ;
+               rdfs:subPropertyOf dc:format .
+
+
+###  http://purl.org/dc/terms/hasFormat
+dcterms:hasFormat rdf:type owl:AnnotationProperty ;
+                  rdfs:subPropertyOf dc:relation ,
+                                     dcterms:relation .
+
+
+###  http://purl.org/dc/terms/hasPart
+dcterms:hasPart rdf:type owl:AnnotationProperty ;
+                rdfs:subPropertyOf dc:relation ,
+                                   dcterms:relation .
+
+
+###  http://purl.org/dc/terms/hasVersion
+dcterms:hasVersion rdf:type owl:AnnotationProperty ;
+                   rdfs:subPropertyOf dc:relation ,
+                                      dcterms:relation .
+
+
+###  http://purl.org/dc/terms/identifier
+dcterms:identifier rdf:type owl:AnnotationProperty ;
+                   rdfs:subPropertyOf dc:identifier ;
+                   rdfs:range rdfs:Literal .
+
+
+###  http://purl.org/dc/terms/isFormatOf
+dcterms:isFormatOf rdf:type owl:AnnotationProperty ;
+                   rdfs:subPropertyOf dc:relation ,
+                                      dcterms:relation .
+
+
+###  http://purl.org/dc/terms/isPartOf
+dcterms:isPartOf rdf:type owl:AnnotationProperty ;
+                 rdfs:subPropertyOf dc:relation ,
+                                    dcterms:relation .
+
+
+###  http://purl.org/dc/terms/isReferencedBy
+dcterms:isReferencedBy rdf:type owl:AnnotationProperty ;
+                       rdfs:subPropertyOf dc:relation ,
+                                          dcterms:relation .
+
+
+###  http://purl.org/dc/terms/isReplacedBy
+dcterms:isReplacedBy rdf:type owl:AnnotationProperty ;
+                     rdfs:subPropertyOf dc:relation ,
+                                        dcterms:relation .
+
+
+###  http://purl.org/dc/terms/isRequiredBy
+dcterms:isRequiredBy rdf:type owl:AnnotationProperty ;
+                     rdfs:subPropertyOf dc:relation ,
+                                        dcterms:relation .
+
+
+###  http://purl.org/dc/terms/isVersionOf
+dcterms:isVersionOf rdf:type owl:AnnotationProperty ;
+                    rdfs:subPropertyOf dc:relation ,
+                                       dcterms:relation .
+
+
+###  http://purl.org/dc/terms/issued
+dcterms:issued rdf:type owl:AnnotationProperty ;
+               rdfs:subPropertyOf dc:date ;
+               rdfs:range rdfs:Literal .
+
+
+###  http://purl.org/dc/terms/language
+dcterms:language rdf:type owl:AnnotationProperty ;
+                 rdfs:subPropertyOf dc:language .
+
+
+###  http://purl.org/dc/terms/license
+dcterms:license rdf:type owl:AnnotationProperty ;
+                rdfs:subPropertyOf dc:rights ,
+                                   dcterms:rights .
+
+
+###  http://purl.org/dc/terms/medium
+dcterms:medium rdf:type owl:AnnotationProperty ;
+               rdfs:subPropertyOf dc:format ,
+                                  dcterms:format .
+
+
+###  http://purl.org/dc/terms/modified
+dcterms:modified rdf:type owl:AnnotationProperty ;
+                 rdfs:subPropertyOf dc:date ;
+                 rdfs:range rdfs:Literal .
+
+
+###  http://purl.org/dc/terms/publisher
+dcterms:publisher rdf:type owl:AnnotationProperty ;
+                  rdfs:subPropertyOf dc:publisher .
+
+
+###  http://purl.org/dc/terms/references
+dcterms:references rdf:type owl:AnnotationProperty ;
+                   rdfs:subPropertyOf dc:relation ,
+                                      dcterms:relation .
+
+
+###  http://purl.org/dc/terms/relation
+dcterms:relation rdf:type owl:AnnotationProperty ;
+                 rdfs:subPropertyOf dc:relation .
+
+
+###  http://purl.org/dc/terms/replaces
+dcterms:replaces rdf:type owl:AnnotationProperty ;
+                 rdfs:subPropertyOf dc:relation ,
+                                    dcterms:relation .
+
+
+###  http://purl.org/dc/terms/requires
+dcterms:requires rdf:type owl:AnnotationProperty ;
+                 rdfs:subPropertyOf dc:relation ,
+                                    dcterms:relation .
+
+
+###  http://purl.org/dc/terms/rights
+dcterms:rights rdf:type owl:AnnotationProperty ;
+               rdfs:subPropertyOf dc:rights .
+
+
+###  http://purl.org/dc/terms/source
+dcterms:source rdf:type owl:AnnotationProperty ;
+               rdfs:subPropertyOf dc:source ,
+                                  dcterms:relation .
+
+
+###  http://purl.org/dc/terms/spatial
+dcterms:spatial rdf:type owl:AnnotationProperty ;
+                rdfs:subPropertyOf dc:coverage ,
+                                   dcterms:coverage .
+
+
+###  http://purl.org/dc/terms/subject
+dcterms:subject rdf:type owl:AnnotationProperty ;
+                rdfs:subPropertyOf dc:subject .
+
+
+###  http://purl.org/dc/terms/tableOfContents
+dcterms:tableOfContents rdf:type owl:AnnotationProperty ;
+                        rdfs:subPropertyOf dc:description ,
+                                           dcterms:description .
+
+
+###  http://purl.org/dc/terms/temporal
+dcterms:temporal rdf:type owl:AnnotationProperty ;
+                 rdfs:subPropertyOf dc:coverage ,
+                                    dcterms:coverage .
+
+
+###  http://purl.org/dc/terms/title
+dcterms:title rdf:type owl:AnnotationProperty ;
+              rdfs:subPropertyOf dc:title ;
+              rdfs:range rdfs:Literal .
+
+
+###  http://purl.org/dc/terms/type
+dcterms:type rdf:type owl:AnnotationProperty ;
+             rdfs:subPropertyOf dc:type .
+
+
+###  http://purl.org/dc/terms/valid
+dcterms:valid rdf:type owl:AnnotationProperty ;
+              rdfs:subPropertyOf dc:date ;
+              rdfs:range rdfs:Literal .
+
+
+###  http://www.w3.org/2003/06/sw-vocab-status/ns#term_status
+vs:term_status rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#note
+skos:note rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.org/ontology/fo/dessert
+fo:dessert rdf:type owl:ObjectProperty ;
+           rdfs:comment "The dessert property relates a menu to a recipe that may be served as a dessert."@en-gb ;
+           rdfs:label "dessert"@en-gb ;
+           vs:term_status "testing" .
+
+
+###  http://purl.org/ontology/fo/food
+fo:food rdf:type owl:ObjectProperty ;
+        rdfs:domain fo:Ingredient ;
+        rdfs:range fo:Food ;
+        rdfs:comment "The food property relates an ingredient to the food that is required."@en-gb ;
+        rdfs:label "food"@en-gb ;
+        vs:term_status "testing" .
+
+
+###  http://purl.org/ontology/fo/ingredients
+fo:ingredients rdf:type owl:ObjectProperty ;
+               rdfs:comment "The ingredients property relates a recipe or recipe stage to an ingredient list."@en-gb ;
+               rdfs:label "ingredients"@en-gb ;
+               vs:term_status "testing" .
+
+
+###  http://purl.org/ontology/fo/main_course
+fo:main_course rdf:type owl:ObjectProperty ;
+               rdfs:comment "The main course property relates a menu to a recipe that may be served as a main course."@en-gb ;
+               rdfs:label "main course"@en-gb ;
+               vs:term_status "testing" .
+
+
+###  http://purl.org/ontology/fo/method
+fo:method rdf:type owl:ObjectProperty ;
+          rdfs:range fo:Method ;
+          rdfs:comment "The method property relates a recipe or stage to the method used to make it."@en-gb ;
+          rdfs:label "method"@en-gb ;
+          vs:term_status "testing" .
+
+
+###  http://purl.org/ontology/fo/required_technique
+fo:required_technique rdf:type owl:ObjectProperty ;
+                      rdfs:range fo:Technique ;
+                      rdfs:comment "The required technique property indicates that a particular technique is required in order to complete a recipe, method or step."@en-gb ;
+                      rdfs:label "required technique"@en-gb ;
+                      vs:term_status "testing" .
+
+
+###  http://purl.org/ontology/fo/shopping_category
+fo:shopping_category rdf:type owl:ObjectProperty ;
+                     rdfs:domain fo:Food ;
+                     rdfs:comment "The shopping category property relates a food to the shopping category where that food is likely to be found when shopping for it."@en-gb ;
+                     rdfs:label "shopping category"@en-gb ;
+                     vs:term_status "testing" .
+
+
+###  http://purl.org/ontology/fo/side_dish
+fo:side_dish rdf:type owl:ObjectProperty ;
+             rdfs:comment "The side dish property relates a menu to a recipe that may be served as a side dish."@en-gb ;
+             rdfs:label "side dish"@en-gb ;
+             vs:term_status "testing" .
+
+
+###  http://purl.org/ontology/fo/starter
+fo:starter rdf:type owl:ObjectProperty ;
+           rdfs:comment "The starter property relates a menu to a recipe that may be served as a starter."@en-gb ;
+           rdfs:label "starter"@en-gb ;
+           vs:term_status "testing" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://purl.org/ontology/fo/imperial_quantity
+fo:imperial_quantity rdf:type owl:DatatypeProperty ;
+                     rdfs:domain fo:Ingredient ;
+                     rdfs:range xsd:string ;
+                     rdfs:comment "A metric quantity provides a value and imperial unit in a human readable string for use in measuring out an ingredient."@en-gb ;
+                     rdfs:label "imperial quantity"@en-gb ;
+                     vs:term_status "testing" .
+
+
+###  http://purl.org/ontology/fo/metric_quantity
+fo:metric_quantity rdf:type owl:DatatypeProperty ;
+                   rdfs:domain fo:Ingredient ;
+                   rdfs:range xsd:string ;
+                   rdfs:comment "A metric quantity provides a value and metric unit in a human readable string for use in measuring out an ingredient."@en-gb ;
+                   rdfs:label "metric quantity"@en-gb ;
+                   vs:term_status "testing" .
+
+
+###  http://purl.org/ontology/fo/quantity
+fo:quantity rdf:type owl:DatatypeProperty ;
+            rdfs:domain fo:Ingredient ;
+            rdfs:range xsd:nonNegativeInteger ;
+            rdfs:comment "A quantity provides a non-negative integer quantity that can be used as a measure of the food stuff for the ingredient."@en-gb ;
+            rdfs:label "quantity"@en-gb ;
+            vs:term_status "testing" .
+
+
+###  http://purl.org/ontology/fo/serves
+fo:serves rdf:type owl:DatatypeProperty ;
+          rdfs:range xsd:string ;
+          rdfs:comment "The server property indicates what the recipe is intended to serve, this is often a human readable integer range such as '6-8'."@en-gb ;
+          rdfs:label "serves"@en-gb ;
+          vs:term_status "testing" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.org/ontology/fo/Food
+fo:Food rdf:type owl:Class ;
+        rdfs:comment "A Food is something that can be eaten. It may be a basic food such as salt or it may be the more complex result of another recipe, for example chicken stock. A recipe uses foods as part of ingredients and also produces foods to be eaten."@en-gb ;
+        rdfs:label "Food"@en-gb ;
+        vs:term_status "testing" .
+
+
+###  http://purl.org/ontology/fo/Ingredient
+fo:Ingredient rdf:type owl:Class .
+
+
+###  http://purl.org/ontology/fo/Method
+fo:Method rdf:type owl:Class ;
+          rdfs:subClassOf rdf:Seq ;
+          rdfs:comment "A Method is the way in which ingredients are combined, using particular techniques, in order to produce a food. A method is part of a recipe and is also an rdf:Seq."@en-gb ;
+          rdfs:label "Method"@en-gb ;
+          vs:term_status "testing" .
+
+
+###  http://purl.org/ontology/fo/Technique
+fo:Technique rdf:type owl:Class ;
+             rdfs:comment "A Technique is a way of working with an ingredient to produce a desired effect, for example, whipping cream."@en-gb ;
+             rdfs:label "Technique"@en-gb ;
+             vs:term_status "testing" .
+
+
+###  http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq
+rdf:Seq rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://purl.org/ontology/fo/Ingredient
+fo:Ingredient rdf:type owl:NamedIndividual .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+dc: dcterms:title "Dublin Core Metadata Element Set, Version 1.1"@en ;
+    dcterms:modified "2012-06-14"^^xsd:date .
+
+
+fo:Ingredient rdfs:comment "An Ingredient is the combination of a quantity and a food, giving the amount of something that should be used in the recipe."@en-gb ;
+              vs:term_status "testing" ;
+              rdfs:label "Ingredient"@en-gb .
+
+
+###  Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi
