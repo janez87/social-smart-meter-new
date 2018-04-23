@@ -3,8 +3,8 @@
     <uri id="Imports Wizard Entry" name="http://rdfs.org/sioc/ns#" uri="sioc.rdf"/>
     <uri id="Imports Wizard Entry" name="http://xmlns.com/foaf/0.1/" uri="foaf.rdf"/>
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1523635094662" name="http://rdfs.org/sioc/ns" uri="sioc.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1523635094662" name="http://www.semanticweb.org/roosdekok/ontologies/2018/3/untitled-ontology-66" uri="SocialMediaActivity.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1523635094662" name="http://xmlns.com/foaf/0.1/" uri="foaf.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1524423565697" name="http://rdfs.org/sioc/ns" uri="sioc.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1524423565697" name="http://www.semanticweb.org/roosdekok/ontologies/2018/3/untitled-ontology-66" uri="social_media_activity.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1524423565697" name="http://xmlns.com/foaf/0.1/" uri="foaf.rdf"/>
     </group>
 </catalog>

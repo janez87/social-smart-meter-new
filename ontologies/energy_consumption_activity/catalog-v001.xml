@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="User Entered Import Resolution" name="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm" uri="energy_consumption_activity.owl"/>
+    <uri id="Imports Wizard Entry" name="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO" uri="file:/Users/roosdekok/Projects/Thesis-SocialSmartMeter/ontologies/others/sumo/vehicle.owl"/>
+    <uri id="Imports Wizard Entry" name="http://www.semanticweb.org/albrinbor/ontologies/2016/0/city-leisures" uri="file:/Users/roosdekok/Projects/Thesis-SocialSmartMeter/ontologies/others/city_leisures/city-leisures.owl"/>
     <uri id="Imports Wizard Entry" name="http://xmlns.com/foaf/0.1/" uri="foaf.rdf"/>
     <uri id="Imports Wizard Entry" name="http://rdfs.org/sioc/ns#" uri="sioc.rdf"/>
     <uri id="Imports Wizard Entry" name="http://xmlns.com/foaf/0.1/" uri="file:/Users/roosdekok/Projects/Thesis/Report/Ch3_Characteristics/Ontologies/Existing%20ones/Energy%20Consumption%20Behavior/BBC%20Food%20Ontology/food_subselection.owl"/>
@@ -13,14 +16,14 @@
     <uri id="Imports Wizard Entry" name="file:/Users/roosdekok/Projects/Thesis/Report/Ch3_Characteristics/Ontologies/Existing%20ones/Energy%20Consumption%20Behavior/SUMO/SUMO" uri="file:/Users/roosdekok/Projects/Thesis/Report/Ch3_Characteristics/Ontologies/Existing%20ones/Energy%20Consumption%20Behavior/SUMO/SUMO.owl"/>
     <uri id="Imports Wizard Entry" name="http://xmlns.com/foaf/0.1/" uri="file:/Users/roosdekok/Projects/Thesis/Report/Ch3_Characteristics/Ontologies/Existing%20ones/FOAF/foaf.rdf"/>
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1523633525076" name="http://elite.polito.it/ontologies/dogont.owl" uri="dogont.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1523633525076" name="http://elite.polito.it/ontologies/muo-vocab.owl" uri="muo-vocab.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1523633525076" name="http://elite.polito.it/ontologies/poweront.owl" uri="poweront.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1523633525076" name="http://elite.polito.it/ontologies/ucum-instances.owl" uri="ucum-instances.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1523633525076" name="duplicate:http://rdfs.org/sioc/ns" uri="sioc.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1523633525076" name="duplicate:http://rdfs.org/sioc/ns" uri="ns.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1523633525076" name="duplicate:http://www.semanticweb.org/roosdekok/ontologies/2018/1/EnergyConsumptionBehavior" uri="EnergyConsumptionBehavior_v2.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1523633525076" name="duplicate:http://www.semanticweb.org/roosdekok/ontologies/2018/1/EnergyConsumptionBehavior" uri="EnergyConsumptionBehavior_v1.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1523633525076" name="http://xmlns.com/foaf/0.1/" uri="foaf.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1524496870620" name="http://elite.polito.it/ontologies/dogont.owl" uri="dogont.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1524496870620" name="http://elite.polito.it/ontologies/muo-vocab.owl" uri="muo-vocab.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1524496870620" name="http://elite.polito.it/ontologies/poweront.owl" uri="poweront.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1524496870620" name="http://elite.polito.it/ontologies/ucum-instances.owl" uri="ucum-instances.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1524496870620" name="duplicate:http://rdfs.org/sioc/ns" uri="sioc.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1524496870620" name="duplicate:http://rdfs.org/sioc/ns" uri="ns.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1524496870620" name="http://www.semanticweb.org/roosdekok/ontologies/2018/1/EnergyConsumptionBehavior" uri="old/_energy_consumption_activity.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1524496870620" name="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm" uri="energy_consumption_activity.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1524496870620" name="http://xmlns.com/foaf/0.1/" uri="foaf.rdf"/>
     </group>
 </catalog>

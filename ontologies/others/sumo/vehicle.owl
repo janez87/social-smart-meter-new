@@ -1,0 +1,1848 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO#"
+     xml:base="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO"
+     xmlns:SUMO="http://www.ontologyportal.org/SUMO.owl#"
+     xmlns:SUMO1="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:wn="http://www.ontologyportal.org/WordNet.owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO">
+        <rdfs:comment xml:lang="en">A provisional and necessarily lossy translation to OWL.  Please see
+www.ontologyportal.org for the original KIF, which is the authoritative
+source.  This software is released under the GNU Public License
+www.gnu.org.  YAGO mapping thanks to http://www.mpi-inf.mpg.de/~gdemelo/yagosumo/ . 
+WordNet content thanks to http://wordnet.cogsci.edu</rdfs:comment>
+        <rdfs:comment xml:lang="en">Produced on date: Sun May 09 18:37:01 PDT 2010</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#externalImage -->
+
+    <owl:AnnotationProperty rdf:about="http://www.ontologyportal.org/SUMO.owl#externalImage"/>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#formerName -->
+
+    <owl:AnnotationProperty rdf:about="http://www.ontologyportal.org/SUMO.owl#formerName"/>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#geographicSubregion -->
+
+    <owl:AnnotationProperty rdf:about="http://www.ontologyportal.org/SUMO.owl#geographicSubregion"/>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#governmentType -->
+
+    <owl:AnnotationProperty rdf:about="http://www.ontologyportal.org/SUMO.owl#governmentType"/>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#inScopeOfInterest -->
+
+    <owl:AnnotationProperty rdf:about="http://www.ontologyportal.org/SUMO.owl#inScopeOfInterest"/>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#independenceDate -->
+
+    <owl:AnnotationProperty rdf:about="http://www.ontologyportal.org/SUMO.owl#independenceDate"/>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#industryProductType -->
+
+    <owl:AnnotationProperty rdf:about="http://www.ontologyportal.org/SUMO.owl#industryProductType"/>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#inflationRateInCountry -->
+
+    <owl:AnnotationProperty rdf:about="http://www.ontologyportal.org/SUMO.owl#inflationRateInCountry"/>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#instanceRelation -->
+
+    <owl:AnnotationProperty rdf:about="http://www.ontologyportal.org/SUMO.owl#instanceRelation"/>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#landAreaOnly -->
+
+    <owl:AnnotationProperty rdf:about="http://www.ontologyportal.org/SUMO.owl#landAreaOnly"/>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#leaderPosition -->
+
+    <owl:AnnotationProperty rdf:about="http://www.ontologyportal.org/SUMO.owl#leaderPosition"/>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#length -->
+
+    <owl:AnnotationProperty rdf:about="http://www.ontologyportal.org/SUMO.owl#length"/>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#located -->
+
+    <owl:AnnotationProperty rdf:about="http://www.ontologyportal.org/SUMO.owl#located"/>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#meetsSpatially -->
+
+    <owl:AnnotationProperty rdf:about="http://www.ontologyportal.org/SUMO.owl#meetsSpatially"/>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#member -->
+
+    <owl:AnnotationProperty rdf:about="http://www.ontologyportal.org/SUMO.owl#member"/>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#militaryOfArea -->
+
+    <owl:AnnotationProperty rdf:about="http://www.ontologyportal.org/SUMO.owl#militaryOfArea"/>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#oppositeDirection -->
+
+    <owl:AnnotationProperty rdf:about="http://www.ontologyportal.org/SUMO.owl#oppositeDirection"/>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#orbits -->
+
+    <owl:AnnotationProperty rdf:about="http://www.ontologyportal.org/SUMO.owl#orbits"/>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#organizationalObjective -->
+
+    <owl:AnnotationProperty rdf:about="http://www.ontologyportal.org/SUMO.owl#organizationalObjective"/>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#overlapsSpatially -->
+
+    <owl:AnnotationProperty rdf:about="http://www.ontologyportal.org/SUMO.owl#overlapsSpatially"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#comment -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#comment"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- xsd:anyURI -->
+
+    <rdfs:Datatype rdf:about="xsd:anyURI"/>
+    
+
+
+    <!-- xsd:integer -->
+
+    <rdfs:Datatype rdf:about="xsd:integer"/>
+    
+
+
+    <!-- xsd:string -->
+
+    <rdfs:Datatype rdf:about="xsd:string"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#Aircraft -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#Aircraft">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Vehicle"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">aircraft</rdfs:label>
+        <owl:comment xml:lang="en">Any Vehicle which is capable of AirTransportation. Note that this
+class covers both fixed-wing aircraft and helicopters.</owl:comment>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#AircraftCarrier -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#AircraftCarrier">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#MilitaryShip"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">aircraft carrier</rdfs:label>
+        <owl:comment xml:lang="en">A MilitaryShip on which MilitaryAircraft can land and take off.</owl:comment>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#Airplane -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#Airplane">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#Aircraft"/>
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#PoweredVehicle"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">airplane</rdfs:label>
+        <owl:comment xml:lang="en">Airplane is the subclass of Aircraft that are fixed-wing aircraft
+which carry their own power sources. Airplane includes jet airplanes
+and propeller planes, but not gliders.</owl:comment>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#Ambulance -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#Ambulance">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#EmergencyRoadVehicle"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">ambulance</rdfs:label>
+        <owl:comment xml:lang="en">Ambulance is the subclass of EmergencyRoadVehicles that represents
+ambulances.</owl:comment>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#AmphibiousVehicle -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#AmphibiousVehicle">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#LandVehicle"/>
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#WaterVehicle"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">amphibious vehicle</rdfs:label>
+        <owl:comment xml:lang="en">The class of vehicles that can go on land and water</owl:comment>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#ArmoredVehicle -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#ArmoredVehicle">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Vehicle"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">armored vehicle</rdfs:label>
+        <owl:comment xml:lang="en">a vehicle that is protected by armor plate (WN)</owl:comment>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#Automobile -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#Automobile">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#PassengerVehicle"/>
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#SelfPoweredRoadVehicle"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">automobile</rdfs:label>
+        <owl:comment xml:lang="en">Automobile is a subclass of SelfPoweredRoadVehicles including
+passenger cars, family vans, light trucks, and sport utility vehicles.
+In general, this class covers four-wheeled passenger road vehicles.</owl:comment>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#Barge -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#Barge">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#WaterVehicle"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">barge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#BargeCarrierShip -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#BargeCarrierShip">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#CargoShip"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">barge carrier ship</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#Bicycle -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#Bicycle">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#Cycle"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">bicycle</rdfs:label>
+        <owl:comment xml:lang="en">Bicycle is a class of two-wheeled, UserPoweredVehicles.</owl:comment>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#Boxcar -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#Boxcar">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#FreightCar"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">boxcar</rdfs:label>
+        <owl:comment xml:lang="en">Boxcar is the subclass of Railcars that are general-purpose closed
+cars for hauling freight.</owl:comment>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#BulkCargoShip -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#BulkCargoShip">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#DryBulkCarrierShip"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">bulk cargo ship</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#Bus -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#Bus">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#SelfPoweredRoadVehicle"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">bus</rdfs:label>
+        <owl:comment xml:lang="en">Bus is the subclass of SelfPoweredRoadVehicles that can transport
+large numbers of passengers (i.e., dozens) at one time. It can be
+distinguished from a van which is designed to carry less than a dozen
+people.</owl:comment>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#BusinessRailcar -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#BusinessRailcar">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#PassengerRailcar"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">business railcar</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#CabCar -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#CabCar">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#RollingStock"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">cab car</rdfs:label>
+        <owl:comment xml:lang="en">CabCar is the class of passenger railcars that have an operating cab
+in one end of the from which train motion can be controlled in &apos;push&apos;
+mode. A CabCar is placed on the opposite end of the train from the
+locomotive.</owl:comment>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#CableShip -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#CableShip">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#Ship"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">cable ship</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#Canoe -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#Canoe">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#WaterVehicle"/>
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#AgentPoweredVehicle"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">canoe</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#CargoShip -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#CargoShip">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#Ship"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">cargo ship</rdfs:label>
+        <owl:comment xml:lang="en">CargoShip is the subclass of Ships that transport goods in exchange
+for payment. CargoShip includes ships that carry all kinds of cargo,
+including oil and bulk products as well as packaged, palletized, or
+containerized goods.</owl:comment>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#CargoVehicle -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#CargoVehicle">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Vehicle"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">cargo vehicle</rdfs:label>
+        <owl:comment xml:lang="en">A Vehicle that is designed to carry Objects. Note that Vehicles that
+are primarily designed to carry people rather than cargo may still
+carry cargo. For example, a passenger sedan might be capable of
+carrying lumber strapped to the roof. For this reason,
+PassengerVehicle and CargoVehicle are not disjoint.</owl:comment>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#Catamaran -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#Catamaran">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#MultihullWaterVehicle"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">catamaran</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#CementCarrierShip -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#CementCarrierShip">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#DryBulkCarrierShip"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">cement carrier ship</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#Chemical-OilTankerShip -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#Chemical-OilTankerShip">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#ChemicalTankerShip"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">chemical- oil tanker ship</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#ChemicalTankerShip -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#ChemicalTankerShip">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#CargoShip"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">chemical tanker ship</rdfs:label>
+        <owl:comment xml:lang="en">ChemicalTankerShip is the subclass of ships that carry
+ChemicalProducts.</owl:comment>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#CombinationBulk-OilCarrierShip -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#CombinationBulk-OilCarrierShip">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#CombinationBulkCarrierShip"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">combination bulk- oil carrier ship</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#CombinationBulkCarrierShip -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#CombinationBulkCarrierShip">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#CargoShip"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">combination bulk carrier ship</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#CombinationOre-OilCarrierShip -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#CombinationOre-OilCarrierShip">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#CombinationBulkCarrierShip"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">combination ore- oil carrier ship</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#Container-RoRoCargoShip -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#Container-RoRoCargoShip">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#RollOnRollOffCargoShip"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">container- ro ro cargo ship</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#ContainerShip -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#ContainerShip">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#CargoShip"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">container ship</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#CraneShip -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#CraneShip">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#Ship"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">crane ship</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#CrewDormCar -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#CrewDormCar">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#PassengerRailcar"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">crew dorm car</rdfs:label>
+        <owl:comment xml:lang="en">CrewDormCars are Railcars used for housing the employee staff on
+long-distance trains.</owl:comment>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#CruiseShip -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#CruiseShip">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#PassengerShip"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">cruise ship</rdfs:label>
+        <owl:comment xml:lang="en">CruiseShip is the subclass of PassengerShips designed for the purpose
+of carrying passengers on extended trips.</owl:comment>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#Cycle -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#Cycle">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#LandVehicle"/>
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#AgentPoweredVehicle"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">cycle</rdfs:label>
+        <owl:comment xml:lang="en">Cycle is a class of wheeled, pedal-driven UserPoweredVehicles that are
+designed to be ridden on roads or trails.</owl:comment>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#DeckCargoShip -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#DeckCargoShip">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#GeneralCargoShip"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">deck cargo ship</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#DisplacementHullWaterVehicle -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#DisplacementHullWaterVehicle">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#WaterVehicle"/>
+        <owl:disjointWith rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#PlaningHullWaterVehicle"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">displacement hull water vehicle</rdfs:label>
+        <owl:comment xml:lang="en">DisplacementHullWaterVehicle is a subclass of WaterVehicle with hulls
+designed to move water aside as they move through the water. Contrast
+with PlaningHullWaterVehicle.</owl:comment>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#Dredger -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#Dredger">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#Ship"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">dredger</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#DrillingShip -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#DrillingShip">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#Ship"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">drilling ship</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#DryBulkCarrierShip -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#DryBulkCarrierShip">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#CargoShip"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">dry bulk carrier ship</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#EmergencyRoadVehicle -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#EmergencyRoadVehicle">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#EmergencyVehicle"/>
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#PoweredVehicle"/>
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#RoadVehicle"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">emergency road vehicle</rdfs:label>
+        <owl:comment xml:lang="en">EmergencyRoadVehicle is the subclass of EmergencyVehicle that includes
+RoadVehicles designed for special use in emergencies, e.g.,
+Ambulances, FireEngines.</owl:comment>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#EmergencyVehicle -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#EmergencyVehicle">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#PoweredVehicle"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">emergency vehicle</rdfs:label>
+        <owl:comment xml:lang="en">EmergencyVehicle is the subclass of Vehicles that are used for
+special-purpose emergency response.</owl:comment>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#FerryBoat -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#FerryBoat">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#WaterVehicle"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">ferry boat</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#FireBoat -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#FireBoat">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#WaterVehicle"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">fire boat</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#FireEngine -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#FireEngine">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#EmergencyRoadVehicle"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">fire engine</rdfs:label>
+        <owl:comment xml:lang="en">FireEngine is the subclass of EmergencyRoadVehicles that represents
+the various vehicles used by a fire department in fighting fires.</owl:comment>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#FishCarrierShip -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#FishCarrierShip">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#FishingShip"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">fish carrier ship</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#FishFactoryShip -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#FishFactoryShip">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#FishingShip"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">fish factory ship</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#FishingShip -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#FishingShip">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#WaterVehicle"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">fishing ship</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#FishingVessel -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#FishingVessel">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#FishingShip"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">fishing vessel</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#FiveWellStackCar -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#FiveWellStackCar">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#FreightCar"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">five well stack car</rdfs:label>
+        <owl:comment xml:lang="en">FiveWellStackCars are five-unit that carry double-stacked containers.</owl:comment>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#Flatcar -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#Flatcar">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#FreightCar"/>
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#OpenTopRailcar"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">flatcar</rdfs:label>
+        <owl:comment xml:lang="en">Flatcars are Freightcars without sides or roofs.</owl:comment>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#FreightCar -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#FreightCar">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#RollingStock"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">freight car</rdfs:label>
+        <owl:comment xml:lang="en">A train car that is designed to carry freight, and not Humans.</owl:comment>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#GalleryCar -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#GalleryCar">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#PassengerRailcar"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">gallery car</rdfs:label>
+        <owl:comment xml:lang="en">GalleryCars are double-decked passenger cars that have a viewing area
+on the second floor.</owl:comment>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#GeneralCargoShip -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#GeneralCargoShip">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#CargoShip"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">general cargo ship</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#GliderPlane -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#GliderPlane">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#Aircraft"/>
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#UnpoweredVehicle"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">glider plane</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#HeadEndCar -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#HeadEndCar">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#RollingStock"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">head end car</rdfs:label>
+        <owl:comment xml:lang="en">HeadEndCars are Railcars that were typically placed at the front of
+the train, including mail and baggage cars.</owl:comment>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#Helicopter -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#Helicopter">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#Aircraft"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">helicopter</rdfs:label>
+        <owl:comment xml:lang="en">Any Aircraft with rapidly rotating wings.</owl:comment>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#HopperDredger -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#HopperDredger">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#Dredger"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">hopper dredger</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#HydraCushionFreightCar -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#HydraCushionFreightCar">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#FreightCar"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">hydra cushion freight car</rdfs:label>
+        <owl:comment xml:lang="en">HydraCushionFreightCars are FreightCars with hydraulic underframes to
+cushion their loads.</owl:comment>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#IceBreakerShip -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#IceBreakerShip">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#Ship"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">ice breaker ship</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#JetAirplane -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#JetAirplane">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#Airplane"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">jet airplane</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#Kayak -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#Kayak">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#WaterVehicle"/>
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#AgentPoweredVehicle"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">kayak</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#LandVehicle -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#LandVehicle">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Vehicle"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">land vehicle</rdfs:label>
+        <owl:comment xml:lang="en">LandVehicle is the class of TransportationDevices that travel on land.
+The two main types of LandVehicle are RoadVehicle and RailVehicle.
+Note that this includes vehicles which travel on any solid surface,
+including a frozen body of water or snow.</owl:comment>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#LightTruck -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#LightTruck">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#Truck"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">light truck</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#LiquefiedGas-ChemicalTankerShip -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#LiquefiedGas-ChemicalTankerShip">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#LiquefiedGasTankerShip"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">liquefied gas- chemical tanker ship</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#LiquefiedGasTankerShip -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#LiquefiedGasTankerShip">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#CargoShip"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">liquefied gas tanker ship</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#LivestockCarrierShip -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#LivestockCarrierShip">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#CargoShip"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">livestock carrier ship</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#Locomotive -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#Locomotive">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#PoweredVehicle"/>
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#RollingStock"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">locomotive</rdfs:label>
+        <owl:comment xml:lang="en">An individual rail vehicle, i.e. a RollingStock which is also a
+PoweredVehicle. Modern locomotives are typically diesel or electric
+powered, while older locomotives ran on Coal.</owl:comment>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#LocomotiveCoalCar -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#LocomotiveCoalCar">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#RollingStock"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">locomotive coal car</rdfs:label>
+        <owl:comment xml:lang="en">LocomotiveCoalCars are Railcars put directly behind the Locomotive and
+used for carrying fuel coal for the engine.</owl:comment>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#MerchantMarineShip -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#MerchantMarineShip">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#Ship"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">merchant marine ship</rdfs:label>
+        <owl:comment xml:lang="en">MerchantMarineShip is the class of Ships that carry goods or
+passengers in exchange for payment. This excludes military ships, as
+well as working ships such as tugboats and fishing vessels. Merchant
+Marine ships belong to the MerchantMarine of some country and are
+registered in the related ShipRegister.</owl:comment>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#MilitaryShip -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#MilitaryShip">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#MilitaryWaterVehicle"/>
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#Ship"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">military ship</rdfs:label>
+        <owl:comment xml:lang="en">Any Ship which is made for a MilitaryOrganization. This includes
+aircraft carriers, destroyers, etc.</owl:comment>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#MilitaryWaterVehicle -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#MilitaryWaterVehicle">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#WaterVehicle"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">military water vehicle</rdfs:label>
+        <owl:comment xml:lang="en">MilitaryWaterVehicle is the class of all WaterVehicle owned or leased
+for use by some MilitaryOrganization.</owl:comment>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#MotorHopper -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#MotorHopper">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#Ship"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">motor hopper</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#MotorRailcar -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#MotorRailcar">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#PassengerRailcar"/>
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#PoweredVehicle"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">motor railcar</rdfs:label>
+        <owl:comment xml:lang="en">MotorRailcars are PassengerRailcars that carry their own power source.</owl:comment>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#MotorScooter -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#MotorScooter">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#RoadVehicle"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">motor scooter</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#Motorcycle -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#Motorcycle">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#RoadVehicle"/>
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#SelfPoweredRoadVehicle"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">motorcycle</rdfs:label>
+        <owl:comment xml:lang="en">Motorcycle is the subclass of RoadVehicles that have two wheels one
+behind the other in the frame, upon which the rider sits on a seat
+above the engine.</owl:comment>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#MotorizedRailwayCar -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#MotorizedRailwayCar">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#PoweredVehicle"/>
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#RollingStock"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">motorized railway car</rdfs:label>
+        <owl:comment xml:lang="en">MotorizedRailwayCar is the subclass of railway cars that carry their
+own power source.</owl:comment>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#MultifunctionalLargeLoadCarrierShip -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#MultifunctionalLargeLoadCarrierShip">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#CargoShip"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">multifunctional large load carrier ship</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#MultihullWaterVehicle -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#MultihullWaterVehicle">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#WaterVehicle"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">multihull water vehicle</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#OceanLiner -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#OceanLiner">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#CargoShip"/>
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#PassengerShip"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">ocean liner</rdfs:label>
+        <owl:comment xml:lang="en">OceanLiner is the subclass of Ships that make regularly scheduled
+voyages to transport people and goods from one place to another.</owl:comment>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#OffshoreSupplyShip -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#OffshoreSupplyShip">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#Ship"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">offshore supply ship</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#OffshoreSupportShip -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#OffshoreSupportShip">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#Ship"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">offshore support ship</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#OffshoreWellProductionShip -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#OffshoreWellProductionShip">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#Ship"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">offshore well production ship</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#OpenTopRailcar -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#OpenTopRailcar">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#FreightCar"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">open top railcar</rdfs:label>
+        <owl:comment xml:lang="en">OpenTopRailcars are FreightCars that have no roof. They may have sides
+or not.</owl:comment>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#OreCarrierShip -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#OreCarrierShip">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#DryBulkCarrierShip"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">ore carrier ship</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#OutfitCar -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#OutfitCar">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#RollingStock"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">outfit car</rdfs:label>
+        <owl:comment xml:lang="en">OutfitCars are Railcars used for housing railway construction or
+maintenance workers in the field. Also called &apos;Camp Cars&apos;.</owl:comment>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#PalletizedCargoShip -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#PalletizedCargoShip">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#GeneralCargoShip"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">palletized cargo ship</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#Passenger-LandingCraft -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#Passenger-LandingCraft">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#PassengerAndCargoShip"/>
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#RollOnRollOffCargoShip"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">passenger- landing craft</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#PassengerAndCargoShip -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#PassengerAndCargoShip">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#CargoShip"/>
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#PassengerShip"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">passenger and cargo ship</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#PassengerRailcar -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#PassengerRailcar">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#PassengerVehicle"/>
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#RollingStock"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">passenger railcar</rdfs:label>
+        <owl:comment xml:lang="en">A train car that is designed to carry Humans.</owl:comment>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#PassengerShip -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#PassengerShip">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#Ship"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">passenger ship</rdfs:label>
+        <owl:comment xml:lang="en">PassengerShip is the subclass of WaterVehicle designed for the purpose
+of carrying passengers.</owl:comment>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#PassengerVehicle -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#PassengerVehicle">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Vehicle"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">passenger vehicle</rdfs:label>
+        <owl:comment xml:lang="en">A Vehicle that is designed to carry Humans. Note that Vehicles that
+are not designed to carry people may still do so. For example, a
+boxcar might still transport homeless people, but was not built to do
+so.</owl:comment>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#PersonalWatercraft -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#PersonalWatercraft">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#WaterVehicle"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">personal watercraft</rdfs:label>
+        <owl:comment xml:lang="en">PersonalWatercraft is the class of motor-driven WaterVehicle ridden by
+one or more passengers, e.g., a JetSki.</owl:comment>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#PetroleumTankerShip -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#PetroleumTankerShip">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#CargoShip"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">petroleum tanker ship</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#PlaningHullWaterVehicle -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#PlaningHullWaterVehicle">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#WaterVehicle"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">planing hull water vehicle</rdfs:label>
+        <owl:comment xml:lang="en">PlaningHullWaterVehicle is a subclass of WaterVehicle with hulls
+designed for a position partially on or above the water surface when
+they are in motion, in order to reduce drag. See also
+DisplacementHullWaterVehicle.</owl:comment>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#PoweredVehicle -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#PoweredVehicle">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Vehicle"/>
+        <owl:disjointWith rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#Railcar"/>
+        <owl:disjointWith rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#Trailer"/>
+        <owl:disjointWith rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#UnpoweredVehicle"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">powered vehicle</rdfs:label>
+        <owl:comment xml:lang="en">A Vehicle that has a powerComponent. Note that PoweredVehicles include
+those vehicles that have a powerComponent where the user can and does
+often choose not to use it, such as a moped with pedals.</owl:comment>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#PrivateRailcar -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#PrivateRailcar">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#RollingStock"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">private railcar</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#PropellerJet -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#PropellerJet">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#Airplane"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">propeller jet</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#PropellerPlane -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#PropellerPlane">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#Airplane"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">propeller plane</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#PusherTug -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#PusherTug">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#TugBoat"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">pusher tug</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#RailVehicle -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#RailVehicle">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#LandVehicle"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">rail vehicle</rdfs:label>
+        <owl:comment xml:lang="en">A Vehicle designed to move on Railways.</owl:comment>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#Railcar -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#Railcar">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#RollingStock"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">railcar</rdfs:label>
+        <owl:comment xml:lang="en">Railcar is the subclass of RollingStock that includes all
+non-locomotive, non-self-powered RailVehicles.</owl:comment>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#RailcarCarrierShip -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#RailcarCarrierShip">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#RollOnRollOffCargoShip"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">railcar carrier ship</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#RefrigeratedCargoShip -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#RefrigeratedCargoShip">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#CargoShip"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">refrigerated cargo ship</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#RefrigeratorCar -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#RefrigeratorCar">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#Boxcar"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">refrigerator car</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#ResearchShip -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#ResearchShip">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#Ship"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">research ship</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#RoadVehicle -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#RoadVehicle">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#LandVehicle"/>
+        <owl:disjointWith rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#RollingStock"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">road vehicle</rdfs:label>
+        <owl:comment xml:lang="en">The class of LandVehicles that are not RollingStock.</owl:comment>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#RollOnRollOffCargoShip -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#RollOnRollOffCargoShip">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#CargoShip"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">roll on roll off cargo ship</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#RollingStock -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#RollingStock">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#RailVehicle"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">rolling stock</rdfs:label>
+        <owl:comment xml:lang="en">A single rail car. Any RailVehicle that is not composed of other
+RailVehicles.</owl:comment>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#RotaryDumpCar -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#RotaryDumpCar">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#OpenTopRailcar"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">rotary dump car</rdfs:label>
+        <owl:comment xml:lang="en">RotaryDumpCars are open-top cargo carriers that have a rotating
+coupler allowing them to be emptied by dumping while still coupled.</owl:comment>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#Runabout -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#Runabout">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#WaterVehicle"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">runabout</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#Sailboat -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#Sailboat">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#WaterVehicle"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">sailboat</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#ScaleTestCar -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#ScaleTestCar">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#RollingStock"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">scale test car</rdfs:label>
+        <owl:comment xml:lang="en">ScaleTestCars are Railcars of known weight used to test or calibrate
+track scales used for weighing freight.</owl:comment>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#Scooter -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#Scooter">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#LandVehicle"/>
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#AgentPoweredVehicle"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">scooter</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#SelfDischargingBulkCarrierShip -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#SelfDischargingBulkCarrierShip">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#DryBulkCarrierShip"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">self discharging bulk carrier ship</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#SelfPoweredRoadVehicle -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#SelfPoweredRoadVehicle">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#PoweredVehicle"/>
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#RoadVehicle"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">self powered road vehicle</rdfs:label>
+        <owl:comment xml:lang="en">SelfPoweredRoadVehicle is the class of RoadVehicles that are also
+PoweredVehicles. SelfPoweredRoadVehicle covers motorcycles,
+semi-trailers, RVs, etc., as well as Automobiles. This class includes
+vehicles powered by electricity, gasoline, diesel, and other fuels.</owl:comment>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#Ship -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#Ship">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#DisplacementHullWaterVehicle"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">ship</rdfs:label>
+        <owl:comment xml:lang="en">Ship is the class of large WaterVehicle used for travel on oceans,
+seas, or large lakes.</owl:comment>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#ShortSeaPassengerShip -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#ShortSeaPassengerShip">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#PassengerShip"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">short sea passenger ship</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#SludgeDisposalVessel -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#SludgeDisposalVessel">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#Ship"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">sludge disposal vessel</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#Spacecraft -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#Spacecraft">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Vehicle"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">spacecraft</rdfs:label>
+        <owl:comment xml:lang="en">Any Vehicle which is capable of SpaceTransportation.</owl:comment>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#SpecializedTankerShip -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#SpecializedTankerShip">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#CargoShip"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">specialized tanker ship</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#SpineCar -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#SpineCar">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#Flatcar"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">spine car</rdfs:label>
+        <owl:comment xml:lang="en">SpineCars are articulated Flatcars used to carry trailers or
+containers.</owl:comment>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#StageCoach -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#StageCoach">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#Wagon"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">stage coach</rdfs:label>
+        <owl:comment xml:lang="en">A Wagon that is pulled by Horses and whose purpose was to transport
+Humans and their luggage from one City to the next, especially in
+areas which did not have an established transportation system, e.g.
+the old west.</owl:comment>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#Submarine -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#Submarine">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#WaterVehicle"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">submarine</rdfs:label>
+        <owl:comment xml:lang="en">A WaterVehicle which is capable of travelling under the water level by
+filling tanks with water.</owl:comment>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#TankCar -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#TankCar">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#FreightCar"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">tank car</rdfs:label>
+        <owl:comment xml:lang="en">TankCars are enclosed FreightCars used to carry fluids.</owl:comment>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#Taxicab -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#Taxicab">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#Automobile"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">taxicab</rdfs:label>
+        <owl:comment xml:lang="en">An Automobile which is used to transport people on short trips in
+exchange for a fare.</owl:comment>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#TractorTrailer -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#TractorTrailer">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#RoadVehicle"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">tractor trailer</rdfs:label>
+        <owl:comment xml:lang="en">TractorTrailer is the subclass of RoadVehicles that are truck tractor-
+truck trailer combinations.</owl:comment>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#Trailer -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#Trailer">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#RoadVehicle"/>
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#UnpoweredVehicle"/>
+        <owl:disjointWith rdf:resource="http://www.ontologyportal.org/SUMO.owl#AgentPoweredVehicle"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">trailer</rdfs:label>
+        <owl:comment xml:lang="en">Any RoadVehicle that is also an UnpoweredVehicle, and intended to be
+towed by a PoweredVehicle.</owl:comment>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#Trawler -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#Trawler">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#FishingShip"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">trawler</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#Truck -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#Truck">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#CargoVehicle"/>
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#SelfPoweredRoadVehicle"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">truck</rdfs:label>
+        <owl:comment xml:lang="en">Any Vehicle that is intended to carry substantial amounts of cargo, in
+addition to passengers. This includes 18-wheelers, pickup trucks,
+tanker trucks etc. Consumer vehicles with trunks or enclosed rear
+areas that can carry cargo are not defined as trucks. Truck is the
+subclass of RoadVehicles that are designed primarily for transporting
+various kinds of non-passenger loads. Truck is the class of
+single-bodied trucks or TruckTractors. Note: TractorTrailer
+combinations are a distinct class.</owl:comment>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#TruckTractor -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#TruckTractor">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#Truck"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">truck tractor</rdfs:label>
+        <owl:comment xml:lang="en">TruckTractor is the subclass of Trucks that are used to tow truck
+trailers. Truck tractors are the cab portions of tractor-trailers. See
+also TruckTrailer.</owl:comment>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#TruckTrailer -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#TruckTrailer">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#Wagon"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">truck trailer</rdfs:label>
+        <owl:comment xml:lang="en">TruckTrailer is the subclass of Wagons that are towed by
+TruckTractors. These are the trailers used in tractor-trailer
+(semi-trailer) rigs.</owl:comment>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#TugBoat -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#TugBoat">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#WaterVehicle"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">tug boat</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#UnpoweredVehicle -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#UnpoweredVehicle">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Vehicle"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">unpowered vehicle</rdfs:label>
+        <owl:comment xml:lang="en">A Vehicle that lacks a powerComponent. It coasts like a glider or
+skateboard, thus deriving its power from the potential energy of
+gravity, or by the power of its agent, as in a bicycle.</owl:comment>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#UreaCarrierShip -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#UreaCarrierShip">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#DryBulkCarrierShip"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">urea carrier ship</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#VSTOL -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#VSTOL">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#Airplane"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">V/STOL</rdfs:label>
+        <rdfs:label xml:lang="en">VSTO l</rdfs:label>
+        <owl:comment xml:lang="en">V/STOL is an acronym for Vertical/Short Take-Off and Landing. V/STOL
+aircraft can take-off or land vertically or on short runways. Most
+were experiments or outright failures from the 1950s to 1970s. The
+Hawker-Siddeley Harrier is perhaps the most famous production V/STOL
+aircraft, and the only truly operational successful design to date. .
+Helicopters have continued to dominate vertical flightV/STOL in
+retrospect may be one of the holy grails that has yet to be fully
+fulfilled for general aircraft. V/STOL was originally developed to
+allow fast jets to be operated from clearings in forests, removing
+their reliance on damage-prone runways, or operated from small
+aircraft carriers that would previously only have been able to carry
+helicopters. V/STOL has been replaced by STOVL or short takeoff,
+vertical landing in operation, if not in design. A rolling takeoff,
+sometimes with a ramp reduces the amount of thrust required to lift a
+fully laden aircraft from the ground, and increases the payload and
+range. For instance, the Harrier is incapable of taking off vertically
+with a full weapons and fuel load, and hence is operated as STOVL
+wherever possible. The main advantages in the case of the Harrier is
+closer basing, which reduces response time and tanker support
+requirements. In the case of the Falklands war, it also permitted high
+performance fighter air cover and ground attack without a large
+catapult-based aircraft carrier. (from Wikipedia)</owl:comment>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#VehicleCarrierShip -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#VehicleCarrierShip">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#RollOnRollOffCargoShip"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">vehicle carrier ship</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#Wagon -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#Wagon">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#LandVehicle"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">wagon</rdfs:label>
+        <owl:comment xml:lang="en">A Landcraft that is not self-propelled, but must be pulled by either
+an Animal or a self-propelled Vehicle to move along the ground.</owl:comment>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#WaterVehicle -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#WaterVehicle">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Vehicle"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">water vehicle</rdfs:label>
+        <owl:comment xml:lang="en">WaterVehicle is the class of all TransportationDevices used to travel
+on or in water.</owl:comment>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#WoodChipsCarrierShip -->
+
+    <owl:Class rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#WoodChipsCarrierShip">
+        <rdfs:subClassOf rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#DryBulkCarrierShip"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">wood chips carrier ship</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#AgentPoweredVehicle -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#AgentPoweredVehicle">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Vehicle"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">agent powered vehicle</rdfs:label>
+        <owl:comment xml:lang="en">A Vehicle which is powered by one or more of its passengers or driver,
+for example, a Bicycle.</owl:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#Vehicle -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#Vehicle">
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologyportal.org/SUMO.owl"/>
+        <rdfs:label xml:lang="en">vehicle</rdfs:label>
+        <owl:comment xml:lang="en">Vehicle is the subclass of TransportationDevices that transport passengers or goods from one place to another by moving from one place to the other with them, e.g., cars, trucks, ferries, and airplanes. Contrast with devices such as pipelines, escalators, or supermarket checkout belts, which carry items from one place to another by means of a moving part, without the device removing from the origin to the destination.</owl:comment>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#AgentOfOrganismFn">
+        <owl:comment xml:lang="en">A Function that returns the BiologicalAgent composed of the given
+Organism in a Solution of Mixture.</owl:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#AgricultureFn">
+        <owl:comment xml:lang="en">(AgricultureFn ?PRODUCT) denotes the subclass of Agriculture processes
+in which the AgriculturalProduct ?PRODUCT is cultivated.</owl:comment>
+        <rdfs:label xml:lang="en">agriculture</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#DeadFn">
+        <owl:comment xml:lang="en">The Dead counterpart to the particular live organism. For example
+HumanCorpse is (DeadFn Human). Note that the dead counterpart may not
+have all the original parts of the live object. For example, a
+CutFlower will lack the roots of a FloweringPlant.</owl:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#FoodForFn">
+        <owl:comment xml:lang="en">A Function that denotes SelfConnectedObject containing Nutrients, such
+as carbohydrates, proteins, and fats, that can be ingested by a the
+given class of living Animal and metabolized into energy and body
+tissue.</owl:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#ReceivingAnObjectFn">
+        <owl:comment xml:lang="en">(ReceivingAnObjectFn ?CLASS) denotes a subclass of Getting, all
+instances of which have some instance of ?CLASS as the object received
+(patient).</owl:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#TransportationFn">
+        <owl:comment xml:lang="en">(TransportationFn ?TYPE) denotes the subclass of Transportation events
+in which a TransportationDevice of ?TYPE is the vehicle.</owl:comment>
+        <rdfs:label xml:lang="en">transportation</rdfs:label>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+
