@@ -649,6 +649,12 @@
 
     <rdf:Description rdf:about="http://elite.polito.it/ontologies/dogont.owl#Appliances">
         <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Artifact"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#isUsedForPerforming"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#DwellingActivity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </rdf:Description>
     
 
@@ -660,6 +666,18 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#includes"/>
                 <owl:someValuesFrom rdf:resource="http://purl.org/ontology/fo/Ingredient"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#isConsumedByUsing"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Tableware"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#isProducedBy"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Process"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -687,19 +705,24 @@
     
 
 
+    <!-- http://rdfs.org/sioc/ns#Post -->
+
+    <rdf:Description rdf:about="http://rdfs.org/sioc/ns#Post">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#mayReflect"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Activity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
     <!-- http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Energy_Quantity_And_Emission -->
 
     <rdf:Description rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Energy_Quantity_And_Emission">
         <owl:equivalentClass rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Energy"/>
         <rdfs:label xml:lang="en">energy quantity and emission</rdfs:label>
-    </rdf:Description>
-    
-
-
-    <!-- http://www.co-ode.org/roberts/travel.owl#ModeOfTransport -->
-
-    <rdf:Description rdf:about="http://www.co-ode.org/roberts/travel.owl#ModeOfTransport">
-        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Artifact"/>
     </rdf:Description>
     
 
@@ -765,7 +788,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#isUsedForPerforming"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Activity"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#LeisureActivity"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A man-made object taken as a whole; it may be used by an individual performing an energy consumption activity.</rdfs:comment>
@@ -884,12 +907,6 @@
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Individual"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#isPerformedByUsing"/>
-                <owl:someValuesFrom rdf:resource="http://www.ontologyportal.org/SUMO.owl#Artifact"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -961,7 +978,20 @@
 
     <!-- http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Individual -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Individual"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Individual">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#consumes"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Energy"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#performs"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Activity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
     
 
 
@@ -973,6 +1003,12 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.owl-ontologies.com/travel.owl#isOfferedAt"/>
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Place"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#isPerformedByUsing"/>
+                <owl:someValuesFrom rdf:resource="http://www.ontologyportal.org/SUMO.owl#Artifact"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1052,7 +1088,14 @@
 
     <!-- http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Process -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Process"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Process">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/travel.owl#isOfferedAt"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Source"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
     
 
 
@@ -1078,6 +1121,26 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Tableware">
         <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Artifact"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#isUsedForConsuming"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/ontology/fo/Food"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#TransportationMode -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#TransportationMode">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Artifact"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#isUsedForPerforming"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#MobilityActivity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -1131,6 +1194,7 @@
     <!-- http://elite.polito.it/ontologies/dogont.owl#Appliances -->
 
     <owl:NamedIndividual rdf:about="http://elite.polito.it/ontologies/dogont.owl#Appliances">
+        <isUsedForPerforming rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#DwellingActivity"/>
         <isUsedForPerforming rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#LeisureActivity"/>
     </owl:NamedIndividual>
     
@@ -1177,7 +1241,6 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Activity">
         <travel:isOfferedAt rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Location"/>
         <isPerformedBy rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Individual"/>
-        <isPerformedByUsing rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Artifact"/>
         <mayBeReflectedBy rdf:resource="http://rdfs.org/sioc/ns#Post"/>
     </owl:NamedIndividual>
     
@@ -1186,7 +1249,7 @@
     <!-- http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Artifact -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Artifact">
-        <isUsedForPerforming rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Activity"/>
+        <isUsedForPerforming rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#LeisureActivity"/>
     </owl:NamedIndividual>
     
 
@@ -1230,7 +1293,7 @@
     <!-- http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#LeisureActivity -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#LeisureActivity">
-        <isPerformedByUsing rdf:resource="http://elite.polito.it/ontologies/dogont.owl#Appliances"/>
+        <isPerformedByUsing rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Artifact"/>
     </owl:NamedIndividual>
     
 
