@@ -20,7 +20,7 @@ facebook_config = {
     'app_secret': 'ed940dbde2751fa0c5c3502518ba10c3',
     'app_code': '253299941905863|I8q96FHiFB56zQe1DfI_VwwWnjg',
     'user_token': 'EAADmXZC0PFccBAMZBnThAvrIxiOKfjUtcVeSD7gTswqAfignp31n8t0Xq8bfO93Tq3RvAewmfE3Vm2b4Rdz8WhZCIH9LFy6GxUHdQ6c9B4SKhcduo9oCqbUbREoYbk52omNWWpZBOhUXcKOC8OZBK5otd7Wa5waWWJRwEqhmz75xZAa9TRH9tDEqyR1oO0b7EZD',
-    'short_lived_access_token': 'EAACEdEose0cBABiOOLBMjUhblMc8mxggTIl9w4YqDrN3AZAhs0zCZCw0m02TGGwB83aDhxQgefqUc3K1QMt3Qucenys7Gwr8nxjkae37pZBfIpcTHvIyZBgeU8E4t1PGvia8aGa33mlmxnaxn4gLApJKRWSdo6316looddUasOhm4SbLwiU9dZAZAUFl8dIBI9hHZCvokYD8AZDZD',
+    'short_lived_access_token': 'EAADmXZC0PFccBAO7CQd4cyPRpt8Op0tZCNE6OZBn5XZB7nye4ZAScyIYYdXgSaYe03aMLKlQrM4mlYvjTEQKWJ7LJHpIKIxjF3mKZCry00YBkjZCcr8KZChuzGkZBS6na4tjFStFCTr4DfPXYPnux5suPRLyQE4qWVDzOwR13dueZBA1K4MIROZCaE3F4VwqfbZCXkcZD',
     'extended_token': {
         'access_token': 'EAADmXZC0PFccBAKZByyxcJmBIoZBMdku3DHSuFBtZBPefOTZBMZAu2rBD1vkhDWBao95AfoechFKVSypp9czCdoZCgnbaEvDqA9PaUx3ZCGZAhBa7SJat3Hbe3qKMd3pAhXvZCFkAx7Wwy0sW6Aqh3AQc0m8IZBwrH4F5An5y02VqgsqgZDZD',
         'token_type': 'bearer',
@@ -31,7 +31,14 @@ facebook_config = {
 
 # Google Places API
 google_config = {
-    'api_key': 'AIzaSyBSvDfYxtbKbAtMn9H7zxKRoe-gD3PEaMo'
+    # 'api_key': 'AIzaSyBSvDfYxtbKbAtMn9H7zxKRoe-gD3PEaMo'
+    'api_key': 'AIzaSyCc3lgxFYI9O4VoVeECkjzcQ0JMuDXpvrk'
+}
+
+# Foursquare
+foursquare_config = {
+    'client_id': 'XGHP20LDBWJ0AEJJGE1W1SWBE1CAIIBXWNSOE45G2DJZY5LI',
+    'client_secret': 'BFK3X3JDJHVUVXDB4K5EXEQHGCAECJ4HKPHJC05EZAQ51TWU'
 }
 
 # MongoDB

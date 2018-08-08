@@ -13,13 +13,13 @@ def setup():
     db = client[config['DB_NAME']]
 
     dwelling_dictionary = db['dwelling_dictionary']
-    food_consumption_dictionary = db['food_consumption_dictionary']
+    food_dictionary = db['food_dictionary']
     leisure_dictionary = db['leisure_dictionary']
     mobility_dictionary = db['mobility_dictionary']
 
     return {
         'dwelling': dwelling_dictionary,
-        'food_consumption': food_consumption_dictionary,
+        'food': food_dictionary,
         'leisure': leisure_dictionary,
         'mobility': mobility_dictionary
     }
@@ -56,24 +56,28 @@ def store_dwelling_dictionaries(collection):
 
     terms = read_csv('../dictionaries/images/coco/dwelling_dictionary.csv')
     terms += read_csv('../dictionaries/images/open_images/dwelling_dictionary.csv')
-    insert_terms(terms, collection, 'images')
+    terms += read_csv('../dictionaries/images/places/dwelling_dictionary.csv')
+    insert_terms(terms, collection, 'image')
 
     terms = read_csv('../dictionaries/places/facebook/dwelling_dictionary.csv')
+    terms += read_csv('../dictionaries/places/foursquare/dwelling_dictionary.csv')
     terms += read_csv('../dictionaries/places/google/dwelling_dictionary.csv')
-    insert_terms(terms, collection, 'places')
+    insert_terms(terms, collection, 'place')
 
 
-def store_food_consumption_dictionaries(collection):
-    terms = read_csv('../dictionaries/text/food_consumption_dictionary.csv')
+def store_food_dictionaries(collection):
+    terms = read_csv('../dictionaries/text/food_dictionary.csv')
     insert_terms(terms, collection, 'text')
 
-    terms = read_csv('../dictionaries/images/coco/food_consumption_dictionary.csv')
-    terms += read_csv('../dictionaries/images/open_images/food_consumption_dictionary.csv')
-    insert_terms(terms, collection, 'images')
+    terms = read_csv('../dictionaries/images/coco/food_dictionary.csv')
+    terms += read_csv('../dictionaries/images/open_images/food_dictionary.csv')
+    terms += read_csv('../dictionaries/images/places/food_dictionary.csv')
+    insert_terms(terms, collection, 'image')
 
-    terms = read_csv('../dictionaries/places/facebook/food_consumption_dictionary.csv')
-    terms += read_csv('../dictionaries/places/google/food_consumption_dictionary.csv')
-    insert_terms(terms, collection, 'places')
+    terms = read_csv('../dictionaries/places/facebook/food_dictionary.csv')
+    terms += read_csv('../dictionaries/places/foursquare/food_dictionary.csv')
+    terms += read_csv('../dictionaries/places/google/food_dictionary.csv')
+    insert_terms(terms, collection, 'place')
 
 
 def store_leisure_dictionaries(collection):
@@ -82,11 +86,13 @@ def store_leisure_dictionaries(collection):
 
     terms = read_csv('../dictionaries/images/coco/leisure_dictionary.csv')
     terms += read_csv('../dictionaries/images/open_images/leisure_dictionary.csv')
-    insert_terms(terms, collection, 'images')
+    terms += read_csv('../dictionaries/images/places/leisure_dictionary.csv')
+    insert_terms(terms, collection, 'image')
 
     terms = read_csv('../dictionaries/places/facebook/leisure_dictionary.csv')
+    terms += read_csv('../dictionaries/places/foursquare/leisure_dictionary.csv')
     terms += read_csv('../dictionaries/places/google/leisure_dictionary.csv')
-    insert_terms(terms, collection, 'places')
+    insert_terms(terms, collection, 'place')
 
 
 def store_mobility_dictionaries(collection):
@@ -95,16 +101,18 @@ def store_mobility_dictionaries(collection):
 
     terms = read_csv('../dictionaries/images/coco/mobility_dictionary.csv')
     terms += read_csv('../dictionaries/images/open_images/mobility_dictionary.csv')
-    insert_terms(terms, collection, 'images')
+    terms += read_csv('../dictionaries/images/places/mobility_dictionary.csv')
+    insert_terms(terms, collection, 'image')
 
-    terms = read_csv('../dictionaries/places/facebook/mobility_dictionary.csv')
+    # terms = read_csv('../dictionaries/places/facebook/mobility_dictionary.csv')
+    terms += read_csv('../dictionaries/places/foursquare/mobility_dictionary.csv')
     terms += read_csv('../dictionaries/places/google/mobility_dictionary.csv')
-    insert_terms(terms, collection, 'places')
+    insert_terms(terms, collection, 'place')
 
 
 def store_dictionaries(collections):
     store_dwelling_dictionaries(collections['dwelling'])
-    store_food_consumption_dictionaries(collections['food_consumption'])
+    store_food_dictionaries(collections['food'])
     store_leisure_dictionaries(collections['leisure'])
     store_mobility_dictionaries(collections['mobility'])
 

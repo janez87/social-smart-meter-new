@@ -1,5 +1,8 @@
+# external modules
 from geopy.geocoders import Nominatim
 from geopy.distance import distance
+from shapely.geometry import Point
+from shapely.geometry.polygon import Polygon
 
 GEOLOCATOR = Nominatim()
 
@@ -44,3 +47,59 @@ def determine_distance_to_previous(place, username, time, collection):
             distance = get_distance_between_places(previous_document['place'], place)
 
     return distance
+
+
+def get_coordinates_from_place(place):
+    latitude = None
+    longitude = None
+
+    location = GEOLOCATOR.geocode(place)
+
+    if location:
+        latitude = location.raw['lat']
+        longitude = location.raw['lon']
+
+    return latitude, longitude
+
+
+def determine_distance_to_home(place, user):
+    if user['home']['name']:
+        home_coordinates = get_coordinates_from_place(user['home']['name'])
+
+        return distance(place['coordinates'], home_coordinates).km
+
+    return None
+
+
+# def determine_area_name(place):
+#     geolocation = GEOLOCATOR.reverse(place['coordinates'])
+#     address = geolocation.raw['address']
+#
+#     area_name = None
+#     if 'neighbourhood' in address.keys():
+#         area_name = geolocation.raw['address']['neighbourhood']
+#
+#     place['area_name'] = area_name
+#
+#     return place
+
+
+def determine_area_name(place, areas):
+    coordinates = place['coordinates'].split(', ')
+    point = Point([float(coordinates[1]), float(coordinates[0])])
+
+    # Check multipolygons
+    for area in areas['multipolygons']:
+        for polygon_vector in area['geometry']['coordinates'][0]:
+            polygon = Polygon(polygon_vector)
+            if polygon.contains(point):
+                return area['properties']['name']
+
+
+    # Check polygons
+    for area in areas['polygons']:
+        polygon = Polygon(area['geometry']['coordinates'][0])
+        if polygon.contains(point):
+            return area['properties']['name']
+
+    return None

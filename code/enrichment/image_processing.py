@@ -1,14 +1,22 @@
+# system modules
 import os
 import sys
 
+# external modules
 import numpy as np
 import pickle
 import skimage.io
-
+import torch
+from torch.autograd import Variable as V
+import torchvision.models as models
+from torchvision import transforms as trn
+from torch.nn import functional as F
 from matplotlib import pyplot as plt
+from PIL import Image
 
 sys.path.append('../models/')
 
+# my modules
 from tensorflow_object_detection import load_model, run_model_on_single_image
 
 from mrcnn import model as modellib
@@ -61,6 +69,44 @@ def load_tf_model():
     return {'detection_graph': detection_graph, 'category_index': category_index}
 
 
+def load_places_model():
+    # the architecture to use
+    arch = 'resnet50'
+
+    # load the pre-trained weights
+    model_file = '%s_places365.pth.tar' % arch
+    if not os.access(model_file, os.W_OK):
+        weight_url = 'http://places2.csail.mit.edu/models_places365/' + model_file
+        os.system('wget ' + weight_url)
+
+    model = models.__dict__[arch](num_classes=365)
+    checkpoint = torch.load(model_file, map_location=lambda storage, loc: storage)
+    state_dict = {str.replace(k, 'module.', ''): v for k, v in checkpoint['state_dict'].items()}
+    model.load_state_dict(state_dict)
+    model.eval()
+
+    # load the image transformer
+    centre_crop = trn.Compose([
+        trn.Resize((256, 256)),
+        trn.CenterCrop(224),
+        trn.ToTensor(),
+        trn.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])
+    ])
+
+    # load the class label
+    file_name = 'categories_places365.txt'
+    if not os.access(file_name, os.W_OK):
+        synset_url = 'https://raw.githubusercontent.com/csailvision/places365/master/categories_places365.txt'
+        os.system('wget ' + synset_url)
+    classes = list()
+    with open(file_name) as class_file:
+        for line in class_file:
+            classes.append(line.strip().split(' ')[0][3:])
+    classes = tuple(classes)
+
+    return {'model': model, 'centre_crop': centre_crop, 'classes': classes}
+
+
 def load_models():
     models_path = '../models/models.pkl'
 
@@ -72,11 +118,14 @@ def load_models():
             models = unpickler.load()
     else:
         mrcnn_model = load_mrcnn_model()
-        tf_model = load_tf_model()
+        # tf_model = load_tf_model()
+        tf_model = {}
+        places_model = load_places_model()
 
         models = {
             'mrcnn': mrcnn_model,
-            'tf': tf_model
+            'tf': tf_model,
+            'places': places_model,
         }
 
         # Save the TF model object into a pickle file
@@ -112,7 +161,7 @@ def get_tf_annotations(image, document_id, models):
 
     # For each class id, get class name and get corresponding score
     for class_id, score in zip(class_ids, scores):
-        if score > 0.0:
+        if score > 0.0 and int(class_id) in category_index.keys():
             annotations.append({
                 'class': category_index[int(class_id)]['name'],
                 'score': float(score),
@@ -158,22 +207,75 @@ def get_mrcnn_annotations(image, document_id, models):
     return annotations
 
 
-def get_annotations(image_url, document_id, models):
+def get_places_annotations(image, models):
+    # Get Places-365 model from models object
+    model = models['places']
+
+    annotations = []
+
+    input_img = V(model['centre_crop'](image).unsqueeze(0))
+
+    # forward pass
+    logit = model['model'].forward(input_img)
+    h_x = F.softmax(logit, 1).data.squeeze()
+    probs, idx = h_x.sort(0, True)
+
+    # output the prediction
+    for i in range(0, 5):
+        if probs[i] > 0.2:
+            annotations.append({
+                'class': model['classes'][idx[i]],
+                'score': float(probs[i]),
+                'model': 'places'
+            })
+
+    return annotations
+
+
+def get_annotations(url, document_id, models):
     # Specify the results directory
     # results_dir = '../data/images/output'
 
     annotations = []
 
-    # Load the image from the specified url
-    image = skimage.io.imread(image_url)
+    processed = False
 
-    # Save the image to directory
-    skimage.io.imsave('../../data/images/input/{}.png'.format(document_id), image)
+    path = '../../data/images/input/{}.jpg'.format(document_id)
 
-    # Run the Mask R-CNN model
-    annotations += get_mrcnn_annotations(image, document_id, models)
+    if os.path.isfile(path):
+        image = skimage.io.imread(path)
 
-    # Run the Tensorflow model
-    annotations += get_tf_annotations(image, document_id, models)
+        # Run the Mask R-CNN model
+        annotations += get_mrcnn_annotations(image, document_id, models)
 
-    return annotations
+        # Run the Tensorflow model
+        # annotations += get_tf_annotations(image, document_id, models)
+
+        # Run the Places365 model
+        image = Image.open(path)
+        annotations += get_places_annotations(image, models)
+
+        processed = True
+    else:
+        # Load the image from the specified url
+        image = skimage.io.imread(url)
+
+        # Save the image to directory
+        skimage.io.imsave('../../data/images/input/{}.jpg'.format(document_id), image)
+
+        # Load the image from the input directory
+        image = Image.open('../../data/images/input/{}.jpg'.format(document_id))
+
+        # Run the Mask R-CNN model
+        annotations += get_mrcnn_annotations(image, document_id, models)
+
+        # Run the Tensorflow model
+        # annotations += get_tf_annotations(image, document_id, models)
+
+        # Run the Places365 model
+        image = Image.open(path)
+        annotations += get_places_annotations(image, models)
+
+        processed = True
+
+    return annotations, processed

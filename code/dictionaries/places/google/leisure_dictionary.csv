@@ -1,11 +1,9 @@
 amusement park
 aquarium
 art_gallery
-bar
 beauty_salon
 book_store
 bowling_alley
-cafe
 campground
 casino
 clothing_store
@@ -15,10 +13,8 @@ furniture_store
 gym
 hair_care
 hardware_store
-health
 home_goods_store
 jewelry_store
-lodging
 movie_rental
 movie_theater
 museum
@@ -31,5 +27,4 @@ shoe_store
 shopping_mall
 spa
 stadium
-store
 zoo
