@@ -1,12 +1,14 @@
+# system modules
 import sys
 
+# external modules
 import json
-import requests
 import tweepy
 
 from dateutil.parser import parse
 from pymongo.errors import DuplicateKeyError
 
+# my modules
 sys.path.append("../")
 from config import twitter_config as config
 
@@ -60,10 +62,7 @@ def crawl_twitter_data(params, collection, document):
     print('Inserting Twitter documents..')
 
     count = 0
-    max_posts = 500
-    # max_id = '1011947099859161089'
 
-    # while count < max_posts:
     try:
         for status in tweepy.Cursor(
                 api.search,
@@ -71,7 +70,6 @@ def crawl_twitter_data(params, collection, document):
                 geocode=params['geocode'],
                 since=params['since'],
                 until=params['until'],
-                # max_id=max_id
         ).items(params['count']):
             dump = json.dumps(status._json)
             post = json.loads(dump)
@@ -94,15 +92,10 @@ def crawl_twitter_data(params, collection, document):
             except DuplicateKeyError as e:
                 print(e)
 
-        # max_id = post['id_str']
-
     except Exception as e:
         print(e)
 
     print('Done! {} Twitter documents are inserted.'.format(count))
-
-    # TODO: Implement the strategy described on the website below
-    # https://www.karambelkar.info/2015/01/how-to-use-twitters-search-rest-api-most-effectively./
 
 
 def process_time(post):

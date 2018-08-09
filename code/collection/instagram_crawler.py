@@ -1,5 +1,7 @@
+# system modules
 import sys
 
+# external modules
 import json
 import time
 
@@ -7,6 +9,7 @@ from datetime import datetime
 from pymongo.errors import DuplicateKeyError
 from requests import Session, adapters
 
+# my modules
 sys.path.append("../")
 from config import instagram_config as config
 
