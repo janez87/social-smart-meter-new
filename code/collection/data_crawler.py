@@ -82,12 +82,12 @@ def connect_to_db():
 
 
 def main(args):
-    source = args[0]
-    city = args[1]
-    neighborhood = args[2]
-    year = int(args[3])
-    month = int(args[4])
-    day = int(args[5])
+    source = args[0]            # 'instagram' or 'twitter'
+    city = args[1]              # 'amsterdam' or 'istanbul'
+    neighborhood = args[2]      # e.g. 'centrum' for 'Amsterdam' and '1' for Istanbul
+    year = int(args[3])         # year (e.g. '2018')
+    month = int(args[4])        # month (e.g. '9' for September)
+    day = int(args[5])          # day (e.g. '23')
 
     print('Connecting to Mongo..')
     db = connect_to_db()
@@ -150,7 +150,7 @@ def main(args):
     else:
         t = 60
 
-    if source == '--instagram':
+    if source == 'instagram':
         print('Crawling Instagram..')
 
         instagram_collection = db['instagram']
@@ -172,7 +172,7 @@ def main(args):
                 print('{} to {}'.format(start_date, end_date))
                 crawl_instagram_data(params, instagram_collection, document)
 
-    elif source == '--twitter':
+    elif source == 'twitter':
         print('Crawling Twitter..')
 
         twitter_collection = db['twitter']

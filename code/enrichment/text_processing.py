@@ -52,7 +52,7 @@ def preprocess_text(message):
     return filtered_tokens
 
 
-# TODO: Use this method only for words that are in dictionary
+# TODO: Only use this method for the words that are in one of our dictionaries
 def word_sense_disambiguation(message, word):
     if message and word:
         sense = lesk(message, word)

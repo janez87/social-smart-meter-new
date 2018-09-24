@@ -18,12 +18,9 @@ def setup():
     client = MongoClient(config['DB_HOST'], config['DB_PORT'])
     db = client[config['DB_NAME']]
 
-    twitter_collection = db['twitter']
-    instagram_collection = db['instagram']
-
     collections = {
-        'instagram': instagram_collection,
-        'twitter': twitter_collection
+        'instagram': db['instagram'],
+        'twitter': db['twitter']
     }
 
     return collections
@@ -51,35 +48,22 @@ def save_image(image_url, document_id, collection):
         print('Document {} deleted'.format(document_id))
 
 
-def main(source):
+def main(args):
+    source = args[0]  # name of collection (e.g., 'twitter' or 'instagram')
+
     collections = setup()
 
-    if source == '--instagram':
-        print('Saving Instagram images to input directory')
-        # cursor = collections['instagram'].find({'time': {'$gte': datetime(2018, 7, 27, 0, 0, 0)}},
-        cursor = collections['instagram'].find({'_id': {'$gte': '1832897945024450677_7810164471'}},
-                                               no_cursor_timeout=True)
-        for document in cursor:
-            print('[ID] {}'.format(document['_id']))
-            image_url = document['image']['url']
-            if image_url:
-                save_image(image_url, document['_id'], collections['instagram'])
-        cursor.close()
-        print('Done!')
+    print('Saving images to input directory..')
+    cursor = collections[source].find({}, no_cursor_timeout=True)
 
-    elif source == '--twitter':
-        print('Saving Twitter images to input directory')
-        # cursor = collections['twitter'].find({'time': {'$gte': datetime(2018, 7, 27, 0, 0, 0)}},
-        cursor = collections['twitter'].find({'_id': {'$gte': '1023712969669132288'}},
-                                             no_cursor_timeout=True)
-        for document in cursor:
-            print('[ID] {}'.format(document['_id']))
-            image_url = document['image']['url']
-            if image_url:
-                save_image(image_url, document['_id'], collections['twitter'])
-        cursor.close()
-        print('Done!')
-
+    # For each document in the collection, enrich the data
+    for document in cursor:
+        print('[ID] {}'.format(document['_id']))
+        image_url = document['image']['url']
+        if image_url:
+            save_image(image_url, document['_id'], collections[source])
+    cursor.close()
+    print('Done!')
 
 if __name__ == "__main__":
-    main(sys.argv[1])
+    main(sys.argv[1:])

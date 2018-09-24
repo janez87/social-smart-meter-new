@@ -3,27 +3,17 @@ import os
 import sys
 
 # external modules
-import gensim
 import numpy as np
 
-from datetime import datetime
 from gensim.models import KeyedVectors
-from googletrans import Translator
+# from googletrans import Translator
 from pymongo import MongoClient
-from simplejson import JSONDecodeError
+from pymongo.errors import CursorNotFound
 
 # my modules
 sys.path.append('../')
 from config import mongo_config as config
-from enrichment.place_processing import determine_distance_to_home
 
-# Based on intuition
-# DATA_TYPE_WEIGHTS = {
-#     'dwelling': {'text': 0.3, 'image': 0.2, 'place': 0.5},
-#     'food': {'text': 0.2, 'image': 0.3, 'place': 0.5},
-#     'leisure': {'text': 0.2, 'image': 0.3, 'place': 0.5},
-#     'mobility': {'text': 0.3, 'image': 0.2, 'place': 0.5}
-# }
 
 DATA_TYPE_WEIGHTS = {
     'dwelling': {'text': 0.35, 'image': 0.40, 'place': 0.25},
@@ -44,7 +34,6 @@ def setup():
         'twitter': db['twitter'],
         'instagram': db['instagram'],
         'merged': db['merged'],
-        'merged_threshold': db['merged_threshold']
     }
 
     # Make sure the dictionary collections are up to date
@@ -71,7 +60,7 @@ def setup():
     return collections, dictionaries, text_dictionaries, model
 
 
-def add_term(term, score, data_type, output, dictionary):
+def add_term(term, score, data_type, output):
     if term not in output['terms']:
         output['terms'].append({
             'term': term,
@@ -84,6 +73,7 @@ def dictionary_check(term, output, dictionaries, text_dictionaries, model, data_
     annotation_score = 0
 
     if data_type == 'text':
+        # TODO: googletrans Translator stopped working recently
         # try:
         #     term = translator.translate(term['word']).text
         # except ValueError:
@@ -94,35 +84,21 @@ def dictionary_check(term, output, dictionaries, text_dictionaries, model, data_
         term = term['class']
 
     for category in ['dwelling', 'food', 'leisure', 'mobility']:
-        # print('Category: {}\n'.format(category))
         score = 0
         if dictionaries[category].find({'term': term, 'key': data_type}).count() > 0:
             if data_type == 'text':
-                score = get_similarity_score(term, dictionaries[category], text_dictionaries[category], model)
+                score = get_similarity_score(term, text_dictionaries[category], model)
             elif data_type == 'image':
                 score = annotation_score
             elif data_type == 'place':
                 score = 1
 
-            add_term(term, score, data_type, output[category], dictionaries[category])
-
-    # if dictionaries['dwelling'].find({'term': term, 'data_type': data_type}).count() > 0:
-    #     add_term(term, data_type, output['dwelling'], dictionaries['dwelling'])
-    #
-    # if dictionaries['food'].find({'term': term, 'data_type': data_type}).count() > 0:
-    #     add_term(term, data_type, output['food'], dictionaries['food'])
-    #
-    # if dictionaries['leisure'].find({'term': term, 'data_type': data_type}).count() > 0:
-    #     add_term(term, data_type, output['leisure'], dictionaries['leisure'])
-    #
-    # if dictionaries['mobility'].find({'term': term, 'data_type': data_type}).count() > 0:
-    #     add_term(term, data_type, output['mobility'], dictionaries['mobility'])
+            add_term(term, score, data_type, output[category])
 
     return output
 
 
 def get_dictionary_text_terms(dictionary):
-    # TODO: Not efficient!
     dictionary_terms = []
     cursor = dictionary.find({'key': 'text'})
     for document in cursor:
@@ -131,18 +107,13 @@ def get_dictionary_text_terms(dictionary):
     return dictionary_terms
 
 
-def get_similarity_score(term, dictionary, text_dictionary, model):
-    # print('Calculating similarity score for "{}"..'.format(term))
-
+def get_similarity_score(term, text_dictionary, model):
     try:
         distances = model.wv.distances(term, text_dictionary)
         score = np.mean(distances)
-        # print(score)
     except KeyError as e:
         print(e)
         score = 0.7
-
-    # print('Score is: {}\n'.format(float(score)))
 
     return float(score)
 
@@ -186,7 +157,7 @@ def determine_categories(output, distance_to_previous, user_at_home):
             output[category]['confidence'] = confidence
 
             # Threshold
-            if confidence > 0.44:
+            if confidence > 0.34:
                 categories.append(category)
 
     categories, output = classify_by_rules(output, categories, distance_to_previous, user_at_home)
@@ -195,8 +166,6 @@ def determine_categories(output, distance_to_previous, user_at_home):
 
 
 def calculate_confidence(output, category):
-    # print('Calculating confidence for {}..\n'.format(category))
-
     terms = output[category]['terms']
 
     scores = {
@@ -217,15 +186,7 @@ def calculate_confidence(output, category):
         else:
             confidence[data_type] = 0
 
-        # print('Confidence for {}: {}\n'.format(data_type, confidence))
-        # print('Type: {}\n'.format(type(confidence)))
-
     total_confidence = confidence['text'] + confidence['image'] + confidence['place']
-
-    # print('Total confidence for {}: {}\n'.format(category, total_confidence))
-
-    # print('CONFIDENCE: ', confidence)
-    # count += 1
 
     return total_confidence
 
@@ -244,8 +205,6 @@ def classify_by_rules(output, categories, distance_to_previous, user_at_home):
 
         output['leisure']['classified_by_rule'] = True
 
-    # TODO: 0.5 is an arbitrary choice
-    # TODO: infer mode of transport (are we still doing this?!)
     if distance_to_previous and distance_to_previous > 0.5:
         if 'mobility' not in categories:
             categories.append('mobility')
@@ -256,17 +215,10 @@ def classify_by_rules(output, categories, distance_to_previous, user_at_home):
 
 
 def update_document(output, categories, document, collection):
-    place_categories = document['place']['categories']
-    if 'Train Station' in place_categories:
-        place_categories.remove('Train Station')
-    for term in document['output']['mobility']['terms']:
-        if term['term'] == 'Train Station':
-            document['output']['mobility']['terms'].remove(term)
     collection.update_one({
         '_id': document['_id']
     }, {
         '$set': {
-            'place.categories': place_categories,
             'categories': categories,
             'output': output
         }
@@ -280,17 +232,14 @@ def classify_document(document, collection, dictionaries, text_dictionaries, mod
 
     text = document['text']
     if text['tokens']:
-        # print('Classifying text..')
         output = classify_text(text, output, dictionaries, text_dictionaries, model)
 
     image = document['image']
     if image['annotations']:
-        # print('Classifying image..')
         output = classify_image(image, output, dictionaries, text_dictionaries, model)
 
     place = document['place']
     if place['categories']:
-        # print('Classifying place..')
         output = classify_place(place, output, dictionaries, text_dictionaries, model)
 
     categories, output = determine_categories(output, document['place']['distance_to_previous'],
@@ -327,76 +276,25 @@ def reset_classification(document, collection):
     return update_document(output, categories, document, collection)
 
 
-def main(source):
+def main(args):
+    source = args[0]  # name of collection (e.g., 'twitter', 'instagram' or 'merged')
+
     collections, dictionaries, text_dictionaries, model = setup()
 
-    if source == '--instagram':
-        print('Classifying Instagram documents..')
-        # For each document in the Instagram collection, classify the data
-        # cursor = collections['instagram'].find({'time': {'$gte': datetime(2018, 6, 20, 0, 0, 0)}},
-        cursor = collections['instagram'].find({'_id': {'$gte': '1806892570534533070_1668591476'}, 'place.categories': {'$ne': []}},
-                                               no_cursor_timeout=True)
-        for document in cursor:
-            print(document['_id'])
-            # reset_classification(document, collections['instagram'])
-            classify_document(document, collections['instagram'], dictionaries, text_dictionaries, model)
-        cursor.close()
-        print('Done!')
+    print('Classifying documents..')
+    cursor = collections[source].find({}, no_cursor_timeout=True)
 
-    elif source == '--twitter':
-        print('Classifying Twitter documents..')
-        # For each document in the Twitter collection, classify the data
-        # cursor = collections['twitter'].find({'time': {'$gte': datetime(2018, 6, 20, 0, 0, 0)}},
-        cursor = collections['twitter'].find({'_id': {'$gte': '1009949133724049408'}},
-                                             no_cursor_timeout=True)
-        for document in cursor:
-            print(document['_id'])
-            # reset_classification(document, collections['twitter'])
-            classify_document(document, collections['twitter'], dictionaries, text_dictionaries, model)
-        cursor.close()
-        print('Done!')
-
-    elif source == '--merged':
-        print('Classifying documents in merged collection..')
-        # For each document in the merged collection, classify the data
-        # cursor = collections['merged'].find({'_id': '1809046704396036561_5434854278'}, no_cursor_timeout=True)
-        cursor = collections['merged'].find({'place.name': 'Amsterdam, Netherlands',
-                                             'place.categories': 'Train Station'}, no_cursor_timeout=True)
-        # cursor = collections['merged'].find({'_id': {'$lt': '1809816494335417729_7133209258',
-        #                                              '$gte': '1809814664436384376_356622901'}}, no_cursor_timeout=True)
-        for document in cursor:
-            print(document['_id'])
-            print(document['place']['categories'])
-            document = reset_classification(document, collections['merged'])
-            print(document['place']['categories'])
-            classify_document(document, collections['merged'], dictionaries, text_dictionaries, model)
-        cursor.close()
-        print('Done!')
-
-    elif source == '--threshold':
-        print('Classifying documents (with threshold) in merged collection..')
-        # For each document in the merged_threshold collection, classify the data
-        cursor = collections['merged_threshold'].find({'_id': {'$gte': '1009949133724049408'}},
-                                             no_cursor_timeout=True)
-        for document in cursor:
-            print(document['_id'])
-            reset_classification(document, collections['merged_threshold'])
-            classify_document(document, collections['merged_threshold'], dictionaries, text_dictionaries, model)
-        cursor.close()
-        print('Done!')
+    # For each document in the collection, enrich the data
+    for document in cursor:
+        print('[ID] {}'.format(document['_id']))
+        try:
+            reset_classification(document, collections[source])
+            classify_document(document, collections[source], dictionaries, text_dictionaries, model)
+        except CursorNotFound as e:
+            pass
+    cursor.close()
+    print('Done!')
 
 
 if __name__ == "__main__":
-    main(sys.argv[1])
-
-
-# def readcsv(filename):
-#     ifile = open(filename, "rU")
-#     reader = csv.reader(ifile, delimiter="\n")
-#     rownum = 0
-#     a = []
-#     for row in reader:
-#         a.append(row)
-#         rownum += 1
-#     ifile.close()
-#     return a
+    main(sys.argv[1:])

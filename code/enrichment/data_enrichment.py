@@ -3,9 +3,7 @@ import sys
 
 # external modules
 import numpy as np
-import time
 
-from datetime import datetime
 from pymongo import MongoClient
 from pymongo.errors import DuplicateKeyError
 
@@ -16,32 +14,26 @@ from text_processing import get_tokens
 
 sys.path.append('../')
 from config import mongo_config as config
-from collection.facebook_crawler import get_facebook_place_categories
 from collection.foursquare_crawler import get_foursquare_place_categories, query_place_name
 from collection.google_crawler import get_google_place_categories
 from collection.twitter_crawler import get_twitter_user
 
 
-def setup():
+def setup(city):
     print('Connecting to Mongo..')
     client = MongoClient(config['DB_HOST'], config['DB_PORT'])
     db = client[config['DB_NAME']]
 
-    twitter_collection = db['twitter']
-    instagram_collection = db['instagram']
-    merged_collection = db['merged']
-    users_collection = db['users']
-
     collections = {
-        'twitter': twitter_collection,
-        'instagram': instagram_collection,
-        'merged': merged_collection,
-        'users': users_collection
+        'twitter': db['twitter'],
+        'instagram': db['instagram'],
+        'merged': db['merged'],
+        'users': db['users']
     }
 
     polygons = []
     multipolygons = []
-    for document in db['area'].find({'name': 'istanbul'}):
+    for document in db['area'].find({'name': city}):
         for area in document['geojson']['features']:
             if area['geometry']['type'] == 'Polygon':
                 polygons.append(area)
@@ -53,11 +45,10 @@ def setup():
         'multipolygons': multipolygons
     }
 
-    # TODO: Save model variables in ./../models directory
-    # print('Loading the models..')
-    # models = load_models()
+    print('Loading the models..')
+    models = load_models()
 
-    return collections, areas, {}
+    return collections, areas, models
 
 
 def enrich_user(user, users, source):
@@ -83,12 +74,6 @@ def enrich_user(user, users, source):
     return user
 
 
-def enrich_text_with_language(text):
-    # text['language'] = determine_language(text['message'])
-
-    return text
-
-
 def enrich_text_with_tokens(text):
     if not text['tokens']:
         text['tokens'] = get_tokens(text['message'])
@@ -110,16 +95,12 @@ def enrich_image(image, document_id, models):
 def enrich_place_with_categories(place):
     if not place['processed']:
 
-        place_categories = place['categories']
+        categories = place['categories']
 
-        foursquare_categories = get_foursquare_place_categories(place)
-        print('FOURSQUARE: ', foursquare_categories)
-        place_categories += foursquare_categories
-        # google_categories = get_google_place_categories(place)
-        # print('GOOGLE: ', google_categories)
-        # place_categories += google_categories
+        categories += get_foursquare_place_categories(place)
+        # categories += get_google_place_categories(place)
 
-        place['categories'] = np.unique(place_categories).tolist()
+        place['categories'] = np.unique(categories).tolist()
 
         place['processed'] = True
 
@@ -135,9 +116,6 @@ def enrich_place_by_name(place):
 
     place['coordinates'] = coordinates
 
-    print('CATEGORIES: ', place['categories'])
-    print('COORDINATES: ', place['coordinates'])
-
     return place
 
 
@@ -148,11 +126,7 @@ def enrich_place_with_distance_to_previous(place, username, time, collection):
 
 
 def enrich_place_with_area_name(place, areas):
-    area_name = determine_area_name(place, areas)
-
-    print(area_name)
-
-    return area_name
+    return determine_area_name(place, areas)
 
 
 def update_document(updates, document, collection):
@@ -160,11 +134,11 @@ def update_document(updates, document, collection):
         '_id': document['_id']
     }, {
         '$set': {
-            # 'user': updates['user'],
-            # 'text': updates['text'],
-            # 'image': updates['image'],
+            'user': updates['user'],
+            'text': updates['text'],
+            'image': updates['image'],
             'place': updates['place'],
-            # 'area_name': updates['area_name'],
+            'area_name': updates['area_name'],
         }
     }, upsert=False)
 
@@ -188,110 +162,66 @@ def user_home_check(place, user):
 
 def enrich_document(document, collection, users, areas, models, source):
     user = document['user']
-    # user = enrich_user(document['user'], users, source)
-    #
-    # text = document['text']
-    # if text['message']:
-    #     # if not text['language']:
-    #     #     text = enrich_text_with_language(text)
-    #     text = enrich_text_with_tokens(text)
-    #
-    # image = document['image']
-    # if image['url']:
-    #     image = enrich_image(image, document['_id'], models)
+    user = enrich_user(user, users, source)
+
+    text = document['text']
+    if text['message']:
+        text = enrich_text_with_tokens(text)
+
+    image = document['image']
+    if image['url']:
+        image = enrich_image(image, document['_id'], models)
 
     place = document['place']
     area_name = None
 
-    # if place['name']:
-    #     place = enrich_place_by_name(place)
-    #
-    #     if place['coordinates']:
-    #         area_name = enrich_place_with_area_name(place, areas)
+    if place['name']:
+        place = enrich_place_by_name(place)
+
+        if place['coordinates']:
+            area_name = enrich_place_with_area_name(place, areas)
 
     if place['coordinates']:
-        # place = enrich_place_with_distance_to_previous(place, user['username'], document['time'], collection)
-        # area_name = enrich_place_with_area_name(place, areas)
+        place = enrich_place_with_distance_to_previous(place, user['username'], document['time'], collection)
+        area_name = enrich_place_with_area_name(place, areas)
 
         if place['name']:
             place = enrich_place_with_categories(place)
 
-    # place = user_home_check(place, user)
+    place = user_home_check(place, user)
 
     updates = {
-        # 'user': user,
-        # 'text': text,
-        # 'image': image,
+        'user': user,
+        'text': text,
+        'image': image,
         'place': place,
-        # 'area_name': area_name
+        'area_name': area_name
     }
 
     update_document(updates, document, collection)
 
 
-def main(source):
-    collections, areas, models = setup()
+def main(args):
+    source = args[0]    # name of collection (e.g., 'twitter' or 'instagram')
+    city = args[1]      # name of city ('amsterdam' or 'istanbul')
 
-    if source == '--instagram':
-        print('Enriching Instagram documents..')
-        # cursor = collections['instagram'].find({'time': {'$gte': datetime(2018, 7, 27, 0, 0, 0)}},
-        cursor = collections['instagram'].find({'_id': {'$gte': '1833086586720779780_5809860165'}},
-        # cursor = collections['instagram'].find({'place.name': {'$ne': 'Amsterdam, Netherlands'}, 'place.categories': [],
-                                                # '_id': {'$gte': '1806900875550450285_1291811407'}},
-                                               no_cursor_timeout=True)
-        # For each document in the Instagram collection, enrich the data
-        for document in cursor:
-            print('[ID] {}'.format(document['_id']))
-            try:
-                enrich_document(document, collections['instagram'], collections['users'], areas, models, source)
-            except AttributeError as e:
-                print(e)
-        cursor.close()
-        print('Done!')
+    collections, areas, models = setup(city)
 
-    elif source == '--twitter':
-        print('Enriching Twitter documents..')
-        # cursor = collections['twitter'].find({'time': {'$gte': datetime(2018, 7, 28, 0, 0, 0)}}
-        # cursor = collections['twitter'].find({'_id': {'$gte': '1009949133724049408'},
-        cursor = collections['twitter'].find({'_id': {'$gte': '1018150848245940225'},
-                                              'place.coordinates': None,
-                                              'place.name': {'$ne': None}}, no_cursor_timeout=True)
-        # For each document in the Twitter collection, enrich the data
-        for document in cursor:
-            time.sleep(1)
-            print('[ID] {}'.format(document['_id']))
-            try:
-                enrich_document(document, collections['twitter'], collections['users'], areas, models, source)
-            except AttributeError as e:
-                print(e)
-            except ValueError as e:
-                print(e)
-        cursor.close()
-        print('Done!')
+    print('Enriching documents..')
+    cursor = collections[source].find({}, no_cursor_timeout=True)
 
-    elif source == '--merged':
-        print('Enriching documents..')
-        cursor = collections['merged'].find({'_id': {'$gte': '1811709830843833266_1281777949'},
-                                             'place.processed': False,
-                                             'place.coordinates': {'$ne': None},
-                                             'place.name': {'$ne': None},
-                                             'place.categories': []}, no_cursor_timeout=True)
-
-        # cursor = collections['merged'].find({}, no_cursor_timeout=True)
-
-        # For each document in the merged collection, enrich the data
-        for document in cursor:
-            time.sleep(1)
-            print('[ID] {}'.format(document['_id']))
-            try:
-                enrich_document(document, collections['merged'], collections['users'], areas, models, source)
-            except AttributeError as e:
-                print(e)
-            except ValueError as e:
-                print(e)
-        cursor.close()
-        print('Done!')
+    # For each document in the collection, enrich the data
+    for document in cursor:
+        print('[ID] {}'.format(document['_id']))
+        try:
+            enrich_document(document, collections[source], collections['users'], areas, models, source)
+        except AttributeError as e:
+            print(e)
+        except ValueError as e:
+            print(e)
+    cursor.close()
+    print('Done!')
 
 
 if __name__ == "__main__":
-    main(sys.argv[1])
+    main(sys.argv[1:])

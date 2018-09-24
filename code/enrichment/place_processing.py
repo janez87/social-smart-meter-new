@@ -71,19 +71,6 @@ def determine_distance_to_home(place, user):
     return None
 
 
-# def determine_area_name(place):
-#     geolocation = GEOLOCATOR.reverse(place['coordinates'])
-#     address = geolocation.raw['address']
-#
-#     area_name = None
-#     if 'neighbourhood' in address.keys():
-#         area_name = geolocation.raw['address']['neighbourhood']
-#
-#     place['area_name'] = area_name
-#
-#     return place
-
-
 def determine_area_name(place, areas):
     coordinates = place['coordinates'].split(', ')
     point = Point([float(coordinates[1]), float(coordinates[0])])

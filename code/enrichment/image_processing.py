@@ -27,7 +27,6 @@ from coco.coco import CocoConfig
 from coco.coco import CocoDataset
 
 
-# TODO: Check alternative (RetinaNet model, https://github.com/tensorflow/tpu/tree/master/models/official/retinanet)
 def load_mrcnn_model():
     # Directory to save logs and trained model
     mrcnn_model_dir = '../models/mrcnn/'
@@ -36,7 +35,6 @@ def load_mrcnn_model():
     coco_model_path = '../weights/mask_rcnn_coco.h5'
 
     # Download COCO trained weights from Releases if needed
-    # if not os.path.exists(coco_model_path):
     if not os.path.exists(coco_model_path):
         utils.download_trained_weights(coco_model_path)
 
@@ -119,18 +117,13 @@ def load_models():
     else:
         mrcnn_model = load_mrcnn_model()
         # tf_model = load_tf_model()
-        tf_model = {}
         places_model = load_places_model()
 
         models = {
             'mrcnn': mrcnn_model,
-            'tf': tf_model,
+            'tf': {},
             'places': places_model,
         }
-
-        # Save the TF model object into a pickle file
-        # with open(models_path, 'wb') as f:
-        #     pickle.dump(models, f, protocol=pickle.HIGHEST_PROTOCOL)
 
     return models
 
@@ -201,9 +194,6 @@ def get_mrcnn_annotations(image, document_id, models):
             'model': 'mrcnn'
         })
 
-        # Keep unique class names
-        # annotations = np.unique(annotations)
-
     return annotations
 
 
@@ -233,9 +223,6 @@ def get_places_annotations(image, models):
 
 
 def get_annotations(url, document_id, models):
-    # Specify the results directory
-    # results_dir = '../data/images/output'
-
     annotations = []
 
     processed = False

@@ -2,7 +2,7 @@
 import sys
 
 # external modules
-from datetime import datetime
+from itertools import chain
 from pymongo import MongoClient
 from pymongo.errors import DuplicateKeyError
 
@@ -41,7 +41,7 @@ def update_document(document, collection):
         '_id': document['_id']
     }, {
         '$set': {
-            'categories': document['categories']
+
         }
     }, upsert=False)
 
@@ -51,22 +51,18 @@ def main(arg):
 
     print('Merging Instagram and Twitter collections..')
 
-    instagram_cursor = collections['instagram'].find({'time': {'$gte': datetime(2018, 6, 22, 0, 0, 0)}})
-    twitter_cursor = collections['twitter'].find({'time': {'$gte': datetime(2018, 6, 22, 0, 0, 0)}})
+    instagram_cursor = collections['instagram'].find({}, no_cursor_timeout=True)
+    twitter_cursor = collections['twitter'].find({}, no_cursor_timeout=True)
 
-    for document in instagram_cursor:
+    for document in chain(instagram_cursor, twitter_cursor):
         print(document['_id'])
-        if arg == '--merge':
+        if arg == 'merge':
             insert_document(document, collections['merged'])
-        elif arg == '--update':
+        elif arg == 'update':
             update_document(document, collections['merged'])
 
-    for document in twitter_cursor:
-        print(document['_id'])
-        if arg == '--merge':
-            insert_document(document, collections['merged'])
-        elif arg == '--update':
-            update_document(document, collections['merged'])
+    instagram_cursor.close()
+    twitter_cursor.close()
 
     print('Done!')
 

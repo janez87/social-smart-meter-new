@@ -148,6 +148,8 @@ def process_place_data(post):
         'coordinates': coordinates,
         'categories': categories,
         'distance_to_previous': None,
+        'distance_to_home': None,
+        'user_at_home': False,
         'processed': False
     }
 
@@ -166,8 +168,6 @@ def process_text_data(post):
         'message': message,
         'language': language,
         'tokens': [],
-        'distance_to_home': None,
-        'user_at_home': False,
         'processed': False
     }
 

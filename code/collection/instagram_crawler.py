@@ -128,5 +128,7 @@ def process_place_data(post):
         'coordinates': '%s, %s' % (place['latitude'], place['longitude']),
         'categories': [],
         'distance_to_previous': None,
+        'distance_to_home': None,
+        'user_at_home': False,
         'processed': False
     }
