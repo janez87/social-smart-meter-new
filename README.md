@@ -1,1 +1,1 @@
-# Thesis-SocialSmartMeter
+# social-smart-meter
