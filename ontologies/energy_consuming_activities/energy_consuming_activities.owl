@@ -1,0 +1,1670 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#"
+     xml:base="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm"
+     xmlns:SUMO="http://www.ontologyportal.org/SUMO.owl#"
+     xmlns:ns="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:SEMANCO="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#"
+     xmlns:ns2="http://creativecommons.org/ns#"
+     xmlns:ns1="http://rdfs.org/sioc/ns#"
+     xmlns:SUMO1="file:/Users/roosdekok/Projects/Thesis/Report/Ch3_Characteristics/Ontologies/Existing%20ones/Energy%20Consumption%20Behavior/SUMO/SUMO.owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:EnergyConsumptionBehavior="http://www.semanticweb.org/roosdekok/ontologies/2018/1/EnergyConsumptionBehavior#"
+     xmlns:SUMO2="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO.owl#"
+     xmlns:travel="http://www.owl-ontologies.com/travel.owl#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:wot="http://xmlns.com/wot/0.1/"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm">
+        <owl:imports rdf:resource="file:/Users/roosdekok/Projects/Thesis/Ontologies/SUMO/SUMO"/>
+        <owl:imports rdf:resource="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/HEAD/SEMANCO-HEAD.owl"/>
+        <owl:imports rdf:resource="http://www.semanticweb.org/albrinbor/ontologies/2016/0/city-leisures"/>
+        <owl:imports rdf:resource="http://www.co-ode.org/roberts/travel.owl"/>
+        <owl:imports rdf:resource="http://socsem.open.ac.uk/ontologies/eu#"/>
+        <owl:imports rdf:resource="http://www.owl-ontologies.com/travel.owl"/>
+        <owl:imports rdf:resource="http://rdfs.org/sioc/ns#"/>
+        <owl:imports rdf:resource="file:/Users/roosdekok/Projects/Thesis/Report/Ch3_Characteristics/Ontologies/Existing%20ones/Energy%20Consumption%20Behavior/SUMO/SUMO"/>
+        <owl:imports rdf:resource="http://xmlns.com/foaf/0.1/"/>
+        <rdfs:comment xml:lang="en">An energy consumption activity ontology that describes an individual&apos;s energy consumption activity based on the activities (during which energy is consumed) he/she performs at a particular location at a particular point in time.</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/roosdekok/ontologies/2018/1/EnergyConsumptionBehavior#composedOf -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/1/EnergyConsumptionBehavior#composedOf"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#isIn -->
+
+    <rdf:Description rdf:about="http://elite.polito.it/ontologies/dogont.owl#isIn">
+        <rdfs:domain rdf:resource="http://elite.polito.it/ontologies/dogont.owl#Appliances"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://rdfs.org/sioc/ns#about -->
+
+    <rdf:Description rdf:about="http://rdfs.org/sioc/ns#about">
+        <owl:equivalentProperty rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#mayReflect"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://rdfs.org/sioc/ns#account_of -->
+
+    <rdf:Description rdf:about="http://rdfs.org/sioc/ns#account_of">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Individual"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://rdfs.org/sioc/ns#creator_of -->
+
+    <rdf:Description rdf:about="http://rdfs.org/sioc/ns#creator_of">
+        <rdfs:range rdf:resource="http://rdfs.org/sioc/ns#Item"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.co-ode.org/roberts/upper.owl#has_part -->
+
+    <rdf:Description rdf:about="http://www.co-ode.org/roberts/upper.owl#has_part">
+        <rdfs:domain rdf:resource="http://www.co-ode.org/roberts/travel.owl#Route"/>
+        <rdfs:range rdf:resource="http://www.co-ode.org/roberts/travel.owl#RouteFragment"/>
+        <rdfs:label xml:lang="en">has part</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#hasActivity -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/travel.owl#hasActivity">
+        <owl:inverseOf rdf:resource="http://www.owl-ontologies.com/travel.owl#isOfferedAt"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Location"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Activity"/>
+        <rdfs:comment xml:lang="en">Indicates the activity that is offered by a location.</rdfs:comment>
+        <rdfs:label xml:lang="en">has activity</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#isOfferedAt -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/travel.owl#isOfferedAt">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Activity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Location"/>
+        <rdfs:comment xml:lang="en">Indicates the location that offers the energy consumption activity.</rdfs:comment>
+        <rdfs:label xml:lang="en">is offered at</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#consumes -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#consumes">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#isConsumedBy"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Individual"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Energy"/>
+        <rdfs:label xml:lang="en">consumes</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#hasTypeOfTransport -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#hasTypeOfTransport">
+        <rdfs:domain rdf:resource="http://www.co-ode.org/roberts/travel.owl#VehicleTransport"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#TypeOfTransportValuePartition"/>
+        <rdfs:comment xml:lang="en">Indicates the type of vehicle transport (public or private).</rdfs:comment>
+        <rdfs:label xml:lang="en">has type of transport</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#includes -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#includes">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#isIncludedIn"/>
+        <rdfs:domain rdf:resource="http://purl.org/ontology/fo/Food"/>
+        <rdfs:range rdf:resource="http://purl.org/ontology/fo/Ingredient"/>
+        <rdfs:comment xml:lang="en">Indicates the ingredient that is included in the food.</rdfs:comment>
+        <rdfs:label xml:lang="en">includes</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#isComposedOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#isComposedOf">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#isPartOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Path"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Place"/>
+        <rdfs:comment xml:lang="en">Indicates the place the path is composed of.</rdfs:comment>
+        <rdfs:label xml:lang="en">is composed of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#isConsumedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#isConsumedBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Energy"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Individual"/>
+        <rdfs:comment xml:lang="en">Indicates the individual that has consumed energy.</rdfs:comment>
+        <rdfs:label xml:lang="en">is consumed by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#isConsumedByPerforming -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#isConsumedByPerforming">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Energy"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Activity"/>
+        <rdfs:comment xml:lang="en">Indicates the energy that has been consumed by the performance of an activity.</rdfs:comment>
+        <rdfs:label xml:lang="en">is consumed by performing</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#isConsumedByUsing -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#isConsumedByUsing">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#isUsedForConsuming"/>
+        <rdfs:domain rdf:resource="http://purl.org/ontology/fo/Food"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Tableware"/>
+        <rdfs:comment xml:lang="en">Indicates the tableware that has been used for the consumption of food.</rdfs:comment>
+        <rdfs:label xml:lang="en">is consumed by using</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#isConsumedDuring -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#isConsumedDuring">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#of"/>
+        <rdfs:domain rdf:resource="http://purl.org/ontology/fo/Food"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#FoodConsumption"/>
+        <rdfs:comment xml:lang="en">Indicates the food consumption activity during which the individual has consumed food.</rdfs:comment>
+        <rdfs:label xml:lang="en">is consumed during</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#isIncludedIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#isIncludedIn">
+        <rdfs:domain rdf:resource="http://purl.org/ontology/fo/Ingredient"/>
+        <rdfs:range rdf:resource="http://purl.org/ontology/fo/Food"/>
+        <rdfs:comment xml:lang="en">Indicates the food in which the ingredient is included.</rdfs:comment>
+        <rdfs:label xml:lang="en">is included in</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#isPartOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#isPartOf">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Place"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Path"/>
+        <rdfs:comment xml:lang="en">Indicates the path that the place is part of.</rdfs:comment>
+        <rdfs:label xml:lang="en">is part of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#isPerformedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#isPerformedBy">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#performs"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Activity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Individual"/>
+        <rdfs:comment xml:lang="en">Indicates the individual performing the energy consumption activity.</rdfs:comment>
+        <rdfs:label xml:lang="en">is performed by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#isPerformedByUsing -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#isPerformedByUsing">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#isUsedForPerforming"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Activity"/>
+        <rdfs:range rdf:resource="http://www.ontologyportal.org/SUMO.owl#Artifact"/>
+        <rdfs:comment xml:lang="en">Indicates the artifact that has been used to perform the energy consumption activity.</rdfs:comment>
+        <rdfs:label xml:lang="en">is performed by using</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#isPerformedForProducing -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#isPerformedForProducing">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#isProducedBy"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Process"/>
+        <rdfs:range rdf:resource="http://purl.org/ontology/fo/Food"/>
+        <rdfs:comment xml:lang="en">Indicates the food that has been produced by performing this process.</rdfs:comment>
+        <rdfs:label xml:lang="en">is performed for producing</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#isProducedAt -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#isProducedAt">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#produces"/>
+        <rdfs:domain rdf:resource="http://purl.org/ontology/fo/Food"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Source"/>
+        <rdfs:comment xml:lang="en">Indicates the source (which is a place) where the food is produced.</rdfs:comment>
+        <rdfs:label xml:lang="en">is produced at</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#isProducedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#isProducedBy">
+        <rdfs:domain rdf:resource="http://purl.org/ontology/fo/Food"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Process"/>
+        <rdfs:comment xml:lang="en">Indicates the process that has been performed to produce the food.</rdfs:comment>
+        <rdfs:label xml:lang="en">is produced by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#isUsedForConsuming -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#isUsedForConsuming">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Tableware"/>
+        <rdfs:range rdf:resource="http://purl.org/ontology/fo/Food"/>
+        <rdfs:comment xml:lang="en">Indicates the tableware that has been used to consume or serve the food.</rdfs:comment>
+        <rdfs:label xml:lang="en">is used for consuming</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#isUsedForPerforming -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#isUsedForPerforming">
+        <rdfs:domain rdf:resource="http://www.ontologyportal.org/SUMO.owl#Artifact"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Activity"/>
+        <rdfs:comment xml:lang="en">Indicates the activity that has been performed by using this artifact.</rdfs:comment>
+        <rdfs:label xml:lang="en">is used for performing</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#mayBeReflectedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#mayBeReflectedBy">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#mayReflect"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Activity"/>
+        <rdfs:range rdf:resource="http://rdfs.org/sioc/ns#Post"/>
+        <rdfs:comment xml:lang="en">Indicates the social media post that may reflect this energy consumption activity.</rdfs:comment>
+        <rdfs:label xml:lang="en">may be reflected by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#mayReflect -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#mayReflect">
+        <rdfs:domain rdf:resource="http://rdfs.org/sioc/ns#Item"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Activity"/>
+        <rdfs:comment xml:lang="en">Indicates the energy consumption activity that may be reflected by this social media post.</rdfs:comment>
+        <rdfs:label xml:lang="en">may reflect</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#of -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#of">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#FoodConsumption"/>
+        <rdfs:range rdf:resource="http://purl.org/ontology/fo/Food"/>
+        <rdfs:comment xml:lang="en">Indicates the food that has been consumed during this activity.</rdfs:comment>
+        <rdfs:label xml:lang="en">of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#performs -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#performs">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Individual"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Activity"/>
+        <rdfs:comment xml:lang="en">Indicates the activity that has been performed by this individual.</rdfs:comment>
+        <rdfs:label xml:lang="en">performs</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#produces -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#produces">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Source"/>
+        <rdfs:range rdf:resource="http://purl.org/ontology/fo/Food"/>
+        <rdfs:comment xml:lang="en">Indicates the food that has been produced by this source.</rdfs:comment>
+        <rdfs:label xml:lang="en">produces</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/account -->
+
+    <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/account">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Individual"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/OnlineAccount"/>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#realStateValue -->
+
+    <rdf:Description rdf:about="http://elite.polito.it/ontologies/dogont.owl#realStateValue">
+        <rdfs:domain rdf:resource="http://elite.polito.it/ontologies/dogont.owl#Appliances"/>
+        <rdfs:label xml:lang="en">real state value</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#powerValue -->
+
+    <owl:DatatypeProperty rdf:about="http://elite.polito.it/ontologies/poweront.owl#powerValue">
+        <rdfs:domain rdf:resource="http://elite.polito.it/ontologies/dogont.owl#Appliances"/>
+        <rdfs:label xml:lang="en">power value</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://rdfs.org/sioc/ns#name -->
+
+    <rdf:Description rdf:about="http://rdfs.org/sioc/ns#name">
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/OnlineAccount"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#genderValue -->
+
+    <owl:DatatypeProperty rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#genderValue">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Individual"/>
+        <rdfs:comment xml:lang="en">The gender value of an individual.</rdfs:comment>
+        <rdfs:label xml:lang="en">gender value</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#latitudeValue -->
+
+    <rdf:Description rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#latitudeValue">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Place"/>
+        <rdfs:comment xml:lang="en">The latitude value of the coordinates of a place.</rdfs:comment>
+        <rdfs:label xml:lang="en">latitude value</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#longitudeValue -->
+
+    <rdf:Description rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#longitudeValue">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Place"/>
+        <rdfs:comment xml:lang="en">The longitude value of the coordinates of a place.</rdfs:comment>
+        <rdfs:label xml:lang="en">longitude value</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- http://socsem.open.ac.uk/ontologies/eu#content -->
+
+    <rdf:Description rdf:about="http://socsem.open.ac.uk/ontologies/eu#content">
+        <rdfs:domain rdf:resource="http://rdfs.org/sioc/ns#Post"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://socsem.open.ac.uk/ontologies/eu#created -->
+
+    <rdf:Description rdf:about="http://socsem.open.ac.uk/ontologies/eu#created">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#time"/>
+        <rdfs:domain rdf:resource="http://rdfs.org/sioc/ns#Item"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://socsem.open.ac.uk/ontologies/eu#energyValue -->
+
+    <owl:DatatypeProperty rdf:about="http://socsem.open.ac.uk/ontologies/eu#energyValue">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Energy"/>
+        <rdfs:comment xml:lang="en">Indicates how much energy (in number of kWh) is consumed during an energy consumption activity. (ssm#energyValue)</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#addressOfPlace -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#addressOfPlace">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Place"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">The address of a place.</rdfs:comment>
+        <rdfs:label xml:lang="en">address of place</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#categoryOfPlace -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#categoryOfPlace">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Place"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The category of a place, e.g. a restaurant, museum or town.</rdfs:comment>
+        <rdfs:label xml:lang="en">category of place</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#distanceOfPath -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#distanceOfPath">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Path"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment xml:lang="en">The distance (in km) of the path along which the individual has travelled during his/her mobility activity.</rdfs:comment>
+        <rdfs:label xml:lang="en">distance of path</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#duration -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#duration">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Activity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment xml:lang="en">The duration (in minutes) of the energy consumption activity performed by the individual.</rdfs:comment>
+        <rdfs:label xml:lang="en">duration</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#homeAddress -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#homeAddress">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Individual"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The home address of an individual.</rdfs:comment>
+        <rdfs:label xml:lang="en">home address</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#nameOfPlace -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#nameOfPlace">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Place"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The name of the place, e.g. the name of the restaurant or the name of a town.</rdfs:comment>
+        <rdfs:label xml:lang="en">name of place</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#time -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#time">
+        <rdfs:label xml:lang="en">time</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#timeOfPerformance -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#timeOfPerformance">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#time"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Activity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="en">The time at which the energy consumption activity is performed by the individual.</rdfs:comment>
+        <rdfs:label xml:lang="en">time of performance</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/accountName -->
+
+    <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/accountName">
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/OnlineAccount"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/age -->
+
+    <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/age">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Individual"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/OnlineAccount"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/birthday -->
+
+    <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/birthday">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Individual"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/OnlineAccount"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/firstName -->
+
+    <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/firstName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Individual"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/OnlineAccount"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/gender -->
+
+    <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/gender">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Individual"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/OnlineAccount"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/lastName -->
+
+    <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/lastName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Individual"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/OnlineAccount"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/nick -->
+
+    <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/nick">
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/OnlineAccount"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
+        <rdfs:label xml:lang="en">nick</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#Appliances -->
+
+    <rdf:Description rdf:about="http://elite.polito.it/ontologies/dogont.owl#Appliances">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Artifact"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#isUsedForPerforming"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#DwellingActivity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/ontology/fo/Food -->
+
+    <owl:Class rdf:about="http://purl.org/ontology/fo/Food">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#includes"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/ontology/fo/Ingredient"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#isConsumedByUsing"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Tableware"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#isProducedBy"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Process"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ontology/fo/Ingredient -->
+
+    <owl:Class rdf:about="http://purl.org/ontology/fo/Ingredient">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ontology/fo/Food"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ontology/fo/Technique -->
+
+    <owl:Class rdf:about="http://purl.org/ontology/fo/Technique">
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Modification"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Process"/>
+        <rdfs:comment xml:lang="en-gb">A Technique is a way of working with an ingredient to produce a desired effect, for example, whipping cream.</rdfs:comment>
+        <rdfs:isDefinedBy>http://purl.org/ontology/fo/</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en-gb">Technique</rdfs:label>
+        <ns:term_status>testing</ns:term_status>
+    </owl:Class>
+    
+
+
+    <!-- http://rdfs.org/sioc/ns#Post -->
+
+    <rdf:Description rdf:about="http://rdfs.org/sioc/ns#Post">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#mayReflect"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Activity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Energy_Quantity_And_Emission -->
+
+    <rdf:Description rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Energy_Quantity_And_Emission">
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Energy"/>
+        <rdfs:label xml:lang="en">energy quantity and emission</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.co-ode.org/roberts/travel.owl#Route -->
+
+    <rdf:Description rdf:about="http://www.co-ode.org/roberts/travel.owl#Route">
+        <owl:equivalentClass rdf:resource="http://www.ontologyportal.org/SUMO.owl#TransitRoute"/>
+        <rdfs:label xml:lang="en">route</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.co-ode.org/roberts/travel.owl#RouteFragment -->
+
+    <rdf:Description rdf:about="http://www.co-ode.org/roberts/travel.owl#RouteFragment">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/roberts/travel.owl#Route"/>
+        <rdfs:label xml:lang="en">route fragment</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.co-ode.org/roberts/travel.owl#VehicleTransport -->
+
+    <rdf:Description rdf:about="http://www.co-ode.org/roberts/travel.owl#VehicleTransport">
+        <owl:equivalentClass rdf:resource="http://www.ontologyportal.org/SUMO.owl#Vehicle"/>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.co-ode.org/roberts/travel.owl#ModeOfTransport"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#hasTypeOfTransport"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#PrivateTransport"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#PublicTransport"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:label xml:lang="en">vehicle transport</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.co-ode.org/roberts/upper.owl#Pattern -->
+
+    <rdf:Description rdf:about="http://www.co-ode.org/roberts/upper.owl#Pattern">
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Path"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Location"/>
+        <rdfs:label xml:lang="en">pattern</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#Artifact -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#Artifact">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#isUsedForPerforming"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#LeisureActivity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A man-made object taken as a whole; it may be used by an individual performing an energy consumption activity.</rdfs:comment>
+        <rdfs:label xml:lang="en">artifact</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#Cooking -->
+
+    <owl:Class rdf:about="http://www.ontologyportal.org/SUMO.owl#Cooking">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#DwellingActivity"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Process"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#Human -->
+
+    <rdf:Description rdf:about="http://www.ontologyportal.org/SUMO.owl#Human">
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Individual"/>
+        <rdfs:label xml:lang="en">human</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#Motion -->
+
+    <rdf:Description rdf:about="http://www.ontologyportal.org/SUMO.owl#Motion">
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#MobilityActivity"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Activity"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#TransitRoute -->
+
+    <rdf:Description rdf:about="http://www.ontologyportal.org/SUMO.owl#TransitRoute"/>
+    
+
+
+    <!-- http://www.ontologyportal.org/SUMO.owl#Vehicle -->
+
+    <rdf:Description rdf:about="http://www.ontologyportal.org/SUMO.owl#Vehicle">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/roberts/travel.owl#ModeOfTransport"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#Accommodation -->
+
+    <rdf:Description rdf:about="http://www.owl-ontologies.com/travel.owl#Accommodation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Place"/>
+        <rdfs:label xml:lang="en">accommodation</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.owl-ontologies.com/travel.owl#Destination -->
+
+    <rdf:Description rdf:about="http://www.owl-ontologies.com/travel.owl#Destination">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Place"/>
+        <rdfs:label xml:lang="en">destination</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/albrinbor/ontologies/2016/0/city-leisures#Culture -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/albrinbor/ontologies/2016/0/city-leisures#Culture">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#LeisureActivity"/>
+        <rdfs:label xml:lang="en">culture</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/albrinbor/ontologies/2016/0/city-leisures#Event -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/albrinbor/ontologies/2016/0/city-leisures#Event">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#LeisureActivity"/>
+        <rdfs:label xml:lang="en">event</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/albrinbor/ontologies/2016/0/city-leisures#Gastronomy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/albrinbor/ontologies/2016/0/city-leisures#Gastronomy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#LeisureActivity"/>
+        <rdfs:label xml:lang="en">gastronomy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/albrinbor/ontologies/2016/0/city-leisures#Playful -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/albrinbor/ontologies/2016/0/city-leisures#Playful">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#LeisureActivity"/>
+        <rdfs:label xml:lang="en">playful</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Activity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Activity">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/travel.owl#isOfferedAt"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Location"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#isPerformedBy"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Individual"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#DwellingActivity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#DwellingActivity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Activity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/travel.owl#isOfferedAt"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Place"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#isPerformedByUsing"/>
+                <owl:someValuesFrom rdf:resource="http://elite.polito.it/ontologies/dogont.owl#Appliances"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Energy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Energy">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#isConsumedBy"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Individual"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#isConsumedByPerforming"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Activity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#FoodConsumption -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#FoodConsumption">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Activity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/travel.owl#isOfferedAt"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Place"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#isPerformedByUsing"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Tableware"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#of"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/ontology/fo/Food"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Individual -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Individual">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#consumes"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Energy"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#performs"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Activity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#LeisureActivity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#LeisureActivity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Activity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/travel.owl#isOfferedAt"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Place"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#isPerformedByUsing"/>
+                <owl:someValuesFrom rdf:resource="http://www.ontologyportal.org/SUMO.owl#Artifact"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Location -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Location"/>
+    
+
+
+    <!-- http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#MobilityActivity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#MobilityActivity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Activity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/travel.owl#isOfferedAt"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Path"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#isPerformedByUsing"/>
+                <owl:someValuesFrom rdf:resource="http://www.co-ode.org/roberts/travel.owl#ModeOfTransport"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Modification -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Modification">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Process"/>
+        <rdfs:comment xml:lang="en">A process during which food is modified for the purpose of cooking or sales, e.g. roasting and grinding coffee in order to make coffee.</rdfs:comment>
+        <rdfs:label xml:lang="en">modification</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Path -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Path">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Location"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#isComposedOf"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Place"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Place -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Place">
+        <owl:equivalentClass rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Location"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#PrivateTransport -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#PrivateTransport">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#TypeOfTransportValuePartition"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#PublicTransport"/>
+        <rdfs:comment xml:lang="en">Private transport is a transportation service which is not available for use by the general public.</rdfs:comment>
+        <rdfs:label xml:lang="en">private transport</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Process -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Process">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/travel.owl#isOfferedAt"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Source"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#PublicTransport -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#PublicTransport">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#TypeOfTransportValuePartition"/>
+        <rdfs:comment xml:lang="en">A system of vehicles such as buses and trains that operate at regular times on fixed routes and are used by the public.</rdfs:comment>
+        <rdfs:label xml:lang="en">public transport</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Source -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Source">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Place"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Tableware -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Tableware">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Artifact"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#isUsedForConsuming"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/ontology/fo/Food"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#TransportationMode -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#TransportationMode">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyportal.org/SUMO.owl#Artifact"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#isUsedForPerforming"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#MobilityActivity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#TypeOfTransportValuePartition -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#TypeOfTransportValuePartition">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#PrivateTransport"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#PublicTransport"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#ValuePartition"/>
+        <rdfs:comment xml:lang="en">The type of transport value partition has been created to describe the type of transport. It restricts the range to private and public transport and both are disjoint.</rdfs:comment>
+        <rdfs:label xml:lang="en">type of transport value partition</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#ValuePartition -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#ValuePartition">
+        <rdfs:comment xml:lang="en">A value partition is not part of OWL but it is a &quot;design pattern&quot;: a proven solution for solving a common modelling problem. In this context, a value partition can be created to refine class descriptions.</rdfs:comment>
+        <rdfs:label xml:lang="en">value partition</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Location"/>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#Appliances -->
+
+    <owl:NamedIndividual rdf:about="http://elite.polito.it/ontologies/dogont.owl#Appliances">
+        <isUsedForPerforming rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#DwellingActivity"/>
+        <isUsedForPerforming rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#LeisureActivity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/ontology/fo/Food -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/ontology/fo/Food">
+        <includes rdf:resource="http://purl.org/ontology/fo/Ingredient"/>
+        <isConsumedByUsing rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Tableware"/>
+        <isConsumedDuring rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#FoodConsumption"/>
+        <isProducedAt rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Source"/>
+        <isProducedBy rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Process"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/ontology/fo/Ingredient -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/ontology/fo/Ingredient">
+        <isIncludedIn rdf:resource="http://purl.org/ontology/fo/Food"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://rdfs.org/sioc/ns#Post -->
+
+    <owl:NamedIndividual rdf:about="http://rdfs.org/sioc/ns#Post">
+        <mayReflect rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Activity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/roberts/travel.owl#ModeOfTransport -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/roberts/travel.owl#ModeOfTransport">
+        <isUsedForPerforming rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#MobilityActivity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Activity -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Activity">
+        <travel:isOfferedAt rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Location"/>
+        <isPerformedBy rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Individual"/>
+        <mayBeReflectedBy rdf:resource="http://rdfs.org/sioc/ns#Post"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Artifact -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Artifact">
+        <isUsedForPerforming rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#LeisureActivity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#DwellingActivity -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#DwellingActivity">
+        <isPerformedByUsing rdf:resource="http://elite.polito.it/ontologies/dogont.owl#Appliances"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Energy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Energy">
+        <isConsumedBy rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Individual"/>
+        <isConsumedByPerforming rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Activity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#FoodConsumption -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#FoodConsumption">
+        <isPerformedByUsing rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Tableware"/>
+        <of rdf:resource="http://purl.org/ontology/fo/Food"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Individual -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Individual">
+        <consumes rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Energy"/>
+        <performs rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Activity"/>
+        <foaf:account rdf:resource="http://xmlns.com/foaf/0.1/OnlineAccount"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#LeisureActivity -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#LeisureActivity">
+        <isPerformedByUsing rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Artifact"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Location -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Location">
+        <travel:hasActivity rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Activity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#MobilityActivity -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#MobilityActivity">
+        <isPerformedByUsing rdf:resource="http://www.co-ode.org/roberts/travel.owl#ModeOfTransport"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Path -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Path">
+        <isComposedOf rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Place"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Place -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Place">
+        <isPartOf rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Path"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Process -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Process">
+        <travel:isOfferedAt rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Source"/>
+        <isPerformedForProducing rdf:resource="http://purl.org/ontology/fo/Food"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Source -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Source">
+        <produces rdf:resource="http://purl.org/ontology/fo/Food"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Tableware -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Tableware">
+        <isUsedForConsuming rdf:resource="http://purl.org/ontology/fo/Food"/>
+        <isUsedForPerforming rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#FoodConsumption"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/OnlineAccount -->
+
+    <owl:NamedIndividual rdf:about="http://xmlns.com/foaf/0.1/OnlineAccount">
+        <ns1:account_of rdf:resource="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Individual"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://purl.org/ontology/fo/Food">
+        <rdfs:comment xml:lang="en">Any nutritious substance that people eat or drink in order to maintain life and growth.</rdfs:comment>
+        <rdfs:label xml:lang="en">food</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/ontology/fo/Ingredient">
+        <rdfs:label xml:lang="en">ingredient</rdfs:label>
+        <rdfs:comment xml:lang="en">One of the elements that are used to make food.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#Household_Member">
+        <rdfs:label xml:lang="en">household member</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#hasEnergy_Carrier">
+        <rdfs:label xml:lang="en">has energy carrier</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#hasEnergy_Quantity_And_Emission">
+        <rdfs:label xml:lang="en">has energy quantity and emission</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#hasEnergy_Service">
+        <rdfs:label xml:lang="en">has energy service</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://semanco02.hs-albsig.de/repository/ontology-releases/eu/semanco/ontology/SEMANCO/SEMANCO.owl#hasEnergy_Source">
+        <rdfs:label xml:lang="en">has energy source</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.co-ode.org/roberts/travel.owl#AnimalTransport">
+        <rdfs:label xml:lang="en">animal transport</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.co-ode.org/roberts/travel.owl#ModeOfTransport">
+        <rdfs:label xml:lang="en">mode of transport</rdfs:label>
+        <rdfs:comment xml:lang="en">The means by which an individual travels from origin to destinatin, such as by air, rail, road, or sea.</rdfs:comment>
+        <rdfs:label>ModeOfTransport</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.co-ode.org/roberts/travel.owl#PedestrianTransport">
+        <rdfs:label xml:lang="en">pedestrian transport</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.co-ode.org/roberts/travel.owl#Service">
+        <rdfs:label xml:lang="en">service</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.co-ode.org/roberts/travel.owl#TransportService">
+        <rdfs:label xml:lang="en">transport service</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.co-ode.org/roberts/travel.owl#hasDirectPart">
+        <rdfs:label xml:lang="en">has direct part</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.ontologyportal.org/SUMO.owl#TransportViaRoadVehicle">
+        <rdfs:label xml:lang="en">transport via road vehicle</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.owl-ontologies.com/travel.owl#Adventure">
+        <rdfs:label xml:lang="en">adventure</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.owl-ontologies.com/travel.owl#Beach">
+        <rdfs:label xml:lang="en">beach</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.owl-ontologies.com/travel.owl#BedAndBreakfast">
+        <rdfs:label xml:lang="en">bed and breakfast</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.owl-ontologies.com/travel.owl#BunjeeJumping">
+        <rdfs:label xml:lang="en">bungee jumping</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.owl-ontologies.com/travel.owl#Campground">
+        <rdfs:label xml:lang="en">campground</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.owl-ontologies.com/travel.owl#Capital">
+        <rdfs:label xml:lang="en">capital</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.owl-ontologies.com/travel.owl#City">
+        <rdfs:label xml:lang="en">city</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.owl-ontologies.com/travel.owl#Farmland">
+        <rdfs:label xml:lang="en">farmland</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.owl-ontologies.com/travel.owl#Hiking">
+        <rdfs:label xml:lang="en">hiking</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.owl-ontologies.com/travel.owl#Hotel">
+        <rdfs:label xml:lang="en">hotel</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.owl-ontologies.com/travel.owl#LuxuryHotel">
+        <rdfs:label xml:lang="en">luxury hotel</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.owl-ontologies.com/travel.owl#NationalPark">
+        <rdfs:label xml:lang="en">national park</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.owl-ontologies.com/travel.owl#Relaxation">
+        <rdfs:label xml:lang="en">relaxation</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.owl-ontologies.com/travel.owl#RuralArea">
+        <rdfs:label xml:lang="en">rural area</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.owl-ontologies.com/travel.owl#Sports">
+        <rdfs:label xml:lang="en">sports</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.owl-ontologies.com/travel.owl#Sunbathing">
+        <rdfs:label xml:lang="en">sunbathing</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.owl-ontologies.com/travel.owl#Surfing">
+        <rdfs:label xml:lang="en">surfing</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.owl-ontologies.com/travel.owl#Town">
+        <rdfs:label xml:lang="en">town</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.owl-ontologies.com/travel.owl#UrbanArea">
+        <rdfs:label xml:lang="en">urban area</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.owl-ontologies.com/travel.owl#Yoga">
+        <rdfs:label xml:lang="en">yoga</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.owl-ontologies.com/travel.owl#hasAccommodation">
+        <rdfs:label xml:lang="en">has accommodation</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/albrinbor/ontologies/2016/0/city-leisures#AmusementPark">
+        <rdfs:label xml:lang="en">amusement park</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/albrinbor/ontologies/2016/0/city-leisures#Bar">
+        <rdfs:label xml:lang="en">bar</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/albrinbor/ontologies/2016/0/city-leisures#Basketball">
+        <rdfs:label xml:lang="en">basketball</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/albrinbor/ontologies/2016/0/city-leisures#Bingo">
+        <rdfs:label xml:lang="en">bingo</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/albrinbor/ontologies/2016/0/city-leisures#Bowling">
+        <rdfs:label xml:lang="en">bowling</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/albrinbor/ontologies/2016/0/city-leisures#Casino">
+        <rdfs:label xml:lang="en">casino</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/albrinbor/ontologies/2016/0/city-leisures#Cinema">
+        <rdfs:label xml:lang="en">cinema</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/albrinbor/ontologies/2016/0/city-leisures#Disco">
+        <rdfs:label xml:lang="en">disco</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/albrinbor/ontologies/2016/0/city-leisures#FastFood">
+        <rdfs:label xml:lang="en">fast food</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/albrinbor/ontologies/2016/0/city-leisures#Fishing">
+        <rdfs:label xml:lang="en">fishing</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/albrinbor/ontologies/2016/0/city-leisures#Flamenco">
+        <rdfs:label xml:lang="en">flamenco</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/albrinbor/ontologies/2016/0/city-leisures#Football">
+        <rdfs:label xml:lang="en">football</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/albrinbor/ontologies/2016/0/city-leisures#FormulaOne">
+        <rdfs:label xml:lang="en">formula one</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/albrinbor/ontologies/2016/0/city-leisures#Jazz">
+        <rdfs:label xml:lang="en">jazz</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/albrinbor/ontologies/2016/0/city-leisures#Monument">
+        <rdfs:label xml:lang="en">monument</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/albrinbor/ontologies/2016/0/city-leisures#Motor">
+        <rdfs:label xml:lang="en">motor</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/albrinbor/ontologies/2016/0/city-leisures#MotorBikes">
+        <rdfs:label xml:lang="en">motor bikes</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/albrinbor/ontologies/2016/0/city-leisures#Mountain">
+        <rdfs:label xml:lang="en">mountain</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/albrinbor/ontologies/2016/0/city-leisures#Museum">
+        <rdfs:label xml:lang="en">museum</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/albrinbor/ontologies/2016/0/city-leisures#Music">
+        <rdfs:label xml:lang="en">music</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/albrinbor/ontologies/2016/0/city-leisures#Padel">
+        <rdfs:label xml:lang="en">padel</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/albrinbor/ontologies/2016/0/city-leisures#Picnic">
+        <rdfs:label xml:lang="en">picnic</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/albrinbor/ontologies/2016/0/city-leisures#Pop">
+        <rdfs:label xml:lang="en">pop</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/albrinbor/ontologies/2016/0/city-leisures#Rally">
+        <rdfs:label xml:lang="en">rally</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/albrinbor/ontologies/2016/0/city-leisures#Rap">
+        <rdfs:label xml:lang="en">rap</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/albrinbor/ontologies/2016/0/city-leisures#Restaurant">
+        <rdfs:label xml:lang="en">restaurant</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/albrinbor/ontologies/2016/0/city-leisures#Rock">
+        <rdfs:label xml:lang="en">rock</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/albrinbor/ontologies/2016/0/city-leisures#Sport">
+        <rdfs:label xml:lang="en">sport</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/albrinbor/ontologies/2016/0/city-leisures#Surf">
+        <rdfs:label xml:lang="en">surf</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/albrinbor/ontologies/2016/0/city-leisures#Swimming">
+        <rdfs:label xml:lang="en">swimming</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/albrinbor/ontologies/2016/0/city-leisures#Tasting">
+        <rdfs:label xml:lang="en">tasting</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/albrinbor/ontologies/2016/0/city-leisures#Tennis">
+        <rdfs:label xml:lang="en">tennis</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/albrinbor/ontologies/2016/0/city-leisures#Theatre">
+        <rdfs:label xml:lang="en">theatre</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/albrinbor/ontologies/2016/0/city-leisures#Trekking">
+        <rdfs:label xml:lang="en">trekking</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Activity">
+        <rdfs:comment xml:lang="en">An activity (domestic or outdoor, but not work) performed by an individual through which energy is (in)directly consumed. The activity can be of type dwelling, food consumption, leisure or mobility.</rdfs:comment>
+        <rdfs:label xml:lang="en">activity</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#DwellingActivity">
+        <rdfs:comment xml:lang="en">For a dwelling (or household) activity, generally one or more appliances are used. Among appliances, brown goods (small household electrical entertainment appliances) and white goods (major household appliances) are distinguished.</rdfs:comment>
+        <rdfs:label xml:lang="en">dwelling activity</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Energy">
+        <rdfs:comment xml:lang="en">The energy (in kWh) that is consumed by an individual during the performance of an activity of type dwelling, food consumption, leisure, and/or mobility.</rdfs:comment>
+        <rdfs:label xml:lang="en">energy</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#FoodConsumption">
+        <rdfs:comment xml:lang="en">In food consumption-related activities (having breakfast or lunch, dining, cooking, etc.), the food product itself, the food source, and the (cooking) process are relevant entities. The activities do not only involve consumption of the food but also preparing or buying it.</rdfs:comment>
+        <rdfs:label xml:lang="en">food consumption</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Individual">
+        <rdfs:label xml:lang="en">individual</rdfs:label>
+        <rdfs:comment xml:lang="en">An individual is a person for whom we aim to describe his/her energy consumption activity using his/her social media data.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#LeisureActivity">
+        <rdfs:comment xml:lang="en">Among leisure activities, several subcategories can be distinguished: culture, event, gastronomy, playful, relaxation, and social interaction. Some leisure activities require the use of appliances (or other artifacts).</rdfs:comment>
+        <rdfs:label xml:lang="en">leisure activity</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Location">
+        <rdfs:comment xml:lang="en">A location can be a place or a path.</rdfs:comment>
+        <rdfs:label xml:lang="en">location</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#MobilityActivity">
+        <rdfs:label xml:lang="en">mobility activity</rdfs:label>
+        <rdfs:comment xml:lang="en">A mobility activity is characterized by a path composed of places, including the origin and destination. Furthermore, people travel by a certain transport mode, which may include a certain (public or private) vehicle.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Path">
+        <rdfs:comment xml:lang="en">A path is composed of two or more places; in this context, it serves as a route along which an individual performs a mobility activity.</rdfs:comment>
+        <rdfs:label xml:lang="en">path</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Place">
+        <rdfs:label xml:lang="en">place</rdfs:label>
+        <rdfs:comment xml:lang="en">A particular position, point, or area in space, e.g. a building or area used for a specified purpose or activity (also called a venue), an individual&apos;s home, a country, a town, city or village, etc.)</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Process">
+        <rdfs:label xml:lang="en">process</rdfs:label>
+        <rdfs:comment xml:lang="en">A process during which food is produced, e.g. coffee cultivation.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Source">
+        <rdfs:comment xml:lang="en">A source is a place from which (raw or prepared) food is retrieved, e.g. a coffee field, or a coffee bar.</rdfs:comment>
+        <rdfs:label xml:lang="en">source</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Tableware">
+        <rdfs:comment xml:lang="en">Crockery, cutlery, and glassware used for serving and consuming food and drinks.</rdfs:comment>
+        <rdfs:label xml:lang="en">tableware</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/Document">
+        <rdfs:comment xml:lang="en">The foaf:Document class represents those things which are, broadly conceived, &apos;documents&apos;.</rdfs:comment>
+        <rdfs:label xml:lang="en">Document</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/OnlineAccount">
+        <rdfs:label xml:lang="en">Online Account</rdfs:label>
+        <rdfs:comment xml:lang="en">A foaf:OnlineAccount represents the provision of some form of online service, by some party (indicated indirectly via a foaf:accountServiceHomepage) to some foaf:Agent. The foaf:holdsAccount property of the agent is used to indicate accounts that are associated with the agent.</rdfs:comment>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://elite.polito.it/ontologies/dogont.owl#Appliances"/>
+            <rdf:Description rdf:about="http://www.co-ode.org/roberts/travel.owl#ModeOfTransport"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/roosdekok/ontologies/2018/1/ssm#Tableware"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+
