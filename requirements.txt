@@ -188,7 +188,7 @@ ratelimiter==1.2.0.post0
 regex==2018.2.21
 requests==2.20.0
 requests-oauthlib==0.8.0
-rope==0.10.7
+rope==0.11.0
 ruamel-yaml==0.15.35
 s3transfer==0.1.13
 scikit-image==0.13.0
