@@ -56,7 +56,7 @@ fastcache==1.0.2
 fb==0.4.0
 filelock==2.0.13
 Flask==1.0
-Flask-Cors==3.0.3
+Flask-Cors==3.0.9
 Flask-PyMongo==0.5.2
 Flask-SocketIO==3.0.0
 ftfy==5.3.0
