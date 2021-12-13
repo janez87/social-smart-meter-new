@@ -107,7 +107,7 @@ leaflet==0.0.3
 llvmlite==0.21.0
 lmdb==0.93
 locket==0.2.0
-lxml==4.1.1
+lxml==4.6.5
 marisa-trie==0.7.5
 Markdown==2.6.11
 MarkupSafe==1.0
